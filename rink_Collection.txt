@@ -1,0 +1,19 @@
+https://andrew0409.tistory.com/153
+코드 상세 설명 포함
+
+https://seolin.tistory.com/97
+(중요)소켓 작동방식 그림 포함
+
+https://webnautes.tistory.com/1381
+소켓 패키지 관련 코드에 주석 다수와 이미지 포함
+
+https://smoothiecoding.kr/python-socket-programming/
+아주 간단한 코드만 포함
+
+https://docs.python.org/ko/3/library/socket.html
+수준높은 기술적 번역 포함
+
+https://m.blog.naver.com/nonamed0000/221259426463
+즉시 적용 가능한 간단한 코드와 실습화면 포함
+
+
