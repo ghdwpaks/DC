@@ -9,9 +9,11 @@ import socket
 server = socket.socket()
 print('[소켓 생성완료]')
 s_name = socket.gethostname()
+print("s_name :",s_name)
 
 print('서버 컴퓨터이름:', s_name)
 server.bind((s_name, 999))
+
 
 server.listen(3)
 print('서버 리스닝...')

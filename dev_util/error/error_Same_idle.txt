@@ -1,0 +1,25 @@
+시나리오 :
+    3_socket_embedded_setup.py 파일과 4_client.py 파일을 각각의 cmd에서 구동시킴
+
+오류 구문 : 
+    C:\workspace\dc\dev_util>cd /workspace/dc/dev_util && python 4_client.py
+    Traceback (most recent call last):
+    File "C:\workspace\dc\dev_util\4_client.py", line 4, in <module>
+        clientSock.connect(('127.0.0.1', 8080))
+    ConnectionRefusedError: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+
+    ConnectionRefusedError: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+해결 방법 :
+    https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=jonghong0316&logNo=221690254323&categoryNo=17&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search
+    으로부터 발췌
+
+    Python으로 에코 서버(소켓 통신 시험용 서버)를 만들던 중 발생한 에러. 간단한 답은, 서버와 클라이언트 프로그램을 각각의 idle.exe에서 실행하라는 것 같은 idle.exe 프로그램에서 서버를 먼저 구동 후, 클라이언트로 접속 시도하면 먼저 실행된 서버 스크립트가 닫힘. 따라서 개별 idle 프로그램에서 실행해야 함.
+
+    >> 서버 - 클라이언트 통신 시험용으로 idle 사용 시, 서버와 클라이언트 각각이 idle을 사용할 수 있도록 조치해야 함
+
+
+
+
+

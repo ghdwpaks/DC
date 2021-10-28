@@ -14,3 +14,8 @@ python 2_server.py -p '7900' -s 'qwertyuiop'
 
 cd /workspace/dc/dev_util && python 1_client.py -i '127.0.0.1' -p '7900'
 cd /workspace/dc/dev_util && python 2_server.py -p '7900' -s 'qwertyuiop'
+
+cd /workspace/dc/dev_util && python 3_socket_embedded_setup.py
+cd /workspace/dc/dev_util && python 4_client.py
+
+
