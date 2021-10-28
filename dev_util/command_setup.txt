@@ -19,3 +19,9 @@ cd /workspace/dc/dev_util && python 3_socket_embedded_setup.py
 cd /workspace/dc/dev_util && python 4_client.py
 
 
+
+cd /workspace/dc/dev_util && python 5_client.py
+cd /workspace/dc/dev_util && python 6_server.py
+
+
+
