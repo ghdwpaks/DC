@@ -65,9 +65,7 @@ argparse 모듈(이해를 하지 못해 정리를 하지 못함 나중에 쓰일
 _____________________________________________________________________________________________
 
 
-ipaddress 모듈(https://hi0seon.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0-%EB%84%A4%ED%8A%B8%EC%9
-B%8C%ED%81%AC-%EB%B0%8F-%EC%8B%A4%EC%8A%B5-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%AA
-%A8%EB%93%88)
+ipaddress 모듈(https://hi0seon.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B0%8F-%EC%8B%A4%EC%8A%B5-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%AA%A8%EB%93%88)
 	
 	ipaddress.ip_address()
 	- IP 주소 객체 생성
