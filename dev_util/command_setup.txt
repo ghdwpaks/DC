@@ -33,3 +33,8 @@ cd /workspace/dc/dev_util && python 8_min_cli.py
 
 cd /workspace/dc/dev_util && python 89_controler.py
 
+
+cd /workspace/dc && python main.py
+
+
+cd /workspace/dc/dev_util
