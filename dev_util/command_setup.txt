@@ -20,8 +20,16 @@ cd /workspace/dc/dev_util && python 4_client.py
 
 
 
-cd /workspace/dc/dev_util && python 5_client.py
 cd /workspace/dc/dev_util && python 6_server.py
+cd /workspace/dc/dev_util && python 5_client.py
 
 
+cd /workspace/dc/dev_util && python 5_client_clone1.py
+
+
+
+cd /workspace/dc/dev_util && python 9_min_ser.py
+cd /workspace/dc/dev_util && python 8_min_cli.py
+
+cd /workspace/dc/dev_util && python 89_controler.py
 

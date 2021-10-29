@@ -11,8 +11,7 @@ def connSocket():
             recvData = s.recv(1024).decode('utf-8')
             print("recvData :",recvData)
             print(recvData)
-            #sendData = input("보내기 > ")
-            sendData = "ack"
+            sendData = input("보내기 > ")
             s.send(sendData.encode('utf-8'))
 
 if __name__ == '__main__':
