@@ -1,0 +1,41 @@
+project from : https://github.com/ghdwpaks/dc
+codes from : d4f8c789ecd85848072ad81f81e513a45aad351d
+
+subject : 클라이언트와 서버의 연결이 원활한지에 관한 내용
+
+additional explanation :
+DESKTOP-HCB8KMM (데스크탑)  의 IP(v4) : 172.30.1.8
+DESKTOP-EPE6PMI (노트북)    의 IP(v4) : 192.168.43.196
+DESKTOP-BMNKBJP (데스크탑E) 의 IP(v4) : 192.168.1.193
+127.0.0.1
+
+try 12 :
+    데스크탑의 main을 실행시킨다.
+    main으로부터 실행된 client.py가 종료되고, server.py만이 프로세스로써 작동하고 있으면
+    [분기1]
+    cmd에서 python client.py을 입력함으로써 client.py를 실행시킨다.
+    
+    데스크탑 server.py의 코드변화
+        3 : ser_HOST = '172.30.1.8'
+        4 : ser_PORT = 9999
+    [분기1]
+    데스크탑 client.py의 코드변화
+        3 : cli_HOST = '172.30.1.8'
+        4 : ser_PORT = 9999
+
+        
+    데스크탑 실행문
+        python main.py
+        [분기1]
+        python client.py
+
+res 12 :
+    
+    main으로부터 실행된 server은 살아남았지만
+    client.py는 종료됐다.(예상 적중)
+    python client.py를 입력하여 다시 시작하자
+    [분기1]
+    client.py와 main으로부터 실행된 server.py 가 연결됐다.
+
+    
+    요약 : 실패

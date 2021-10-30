@@ -1,0 +1,48 @@
+project from : https://github.com/ghdwpaks/dc
+codes from : d4f8c789ecd85848072ad81f81e513a45aad351d
+
+subject : 클라이언트와 서버의 연결이 원활한지에 관한 내용
+
+additional explanation :
+DESKTOP-HCB8KMM (데스크탑)  의 IP(v4) : 172.30.1.8
+DESKTOP-EPE6PMI (노트북)    의 IP(v4) : 192.168.43.196
+
+DESKTOP-BMNKBJP (데스크탑E) 의 IP(v4) : 192.168.1.193
+
+
+try 5 :
+    각자의 서버와 클라이언트를 킨다
+    이때, 서버에는 자신의 아이피 주소를
+    클라이언트에는 상대의 주소를 적는다.
+    
+    
+
+    노트북 코드변화
+        server.py
+            3 : ser_HOST = '192.168.43.196'
+            4 : ser_PORT = 9998
+        
+        client.py
+            3 : cli_HOST = '192.168.1.193'
+            4 : cli_PORT = 9999
+
+    노트북 실행문
+        python main.py
+        
+
+    데스크탑E 코드변화
+        server.py
+            3 : ser_HOST = '192.168.1.193'
+            4 : ser_Port = 9999
+        
+        client.py
+            3 : cli_HOST = '192.168.43.196'
+            4 : cli_PORT = 9998
+
+    데스크탑E 실행문
+        python main.py
+
+res 5 :
+    두 컴퓨터의 4개의 창 모두 server.py 만 살아있었고 client.py는 금방 꺼짐을 확인했다.
+    
+    요약 : 실패
