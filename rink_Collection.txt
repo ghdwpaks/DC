@@ -16,6 +16,12 @@ https://docs.python.org/ko/3/library/socket.html
 https://m.blog.naver.com/nonamed0000/221259426463
 즉시 적용 가능한 간단한 코드와 실습화면 포함
 
+https://jonghyeok-dev.tistory.com/13
+aes256 실적용이 가능한 코드 포함
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=chandong83&logNo=221021909030
+aes256 실적용이 가능한 코드와 상세한 설명 포함
+
 ___________________________________________________________________
 socket 모듈 (https://bnzn2426.tistory.com/53)
 
