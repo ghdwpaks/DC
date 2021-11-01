@@ -1,15 +1,15 @@
 import socket
 
-ser_HOST = '127.0.0.1'
-ser_PORT = 9999
+ser_HOST = '192.168.1.22'
+ser_PORT = 9998
 
-
+print("ser")
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind((ser_HOST, ser_PORT))
 
-    s.listen(3)
+    s.listen(5)
     conn, addr = s.accept()
 
 

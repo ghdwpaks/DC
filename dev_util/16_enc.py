@@ -41,11 +41,12 @@ print("len(data) :",len(data))
 #출력
 print("Data is " + str(data))
 
-
+data = [14, 217, 152, 222, 202, 9, 206, 186, 14, 217, 152, 222, 202, 9, 206, 186]
 
 
 #키 생성
 aes = AESCryptoCBC(bytes(key))
+print("aes :",aes)
 #변경
 enc = aes.encrypt(bytes(data))
 print("The encrypted value is " + str(list(enc)))

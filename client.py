@@ -1,7 +1,9 @@
 import socket
 
-cli_HOST = '127.0.0.1'
+cli_HOST = '192.168.1.74'
 cli_PORT = 9999
+
+print("cli")
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((cli_HOST, cli_PORT))
