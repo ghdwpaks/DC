@@ -1,0 +1,199 @@
+aes : <__main__.AESCryptoCBC object at 0x00EEA4A8>
+i : 0
+s : ghdwpaks    홍제만 ghdwpaks 홍제만
+i : 1
+s : ghdwpaks   홍제만 ghdwpaks 홍제만
+i : 2
+s : ghdwpaks  홍제만 ghdwpaks 홍제만
+i : 3
+s : ghdwpaks 홍제만 ghdwpaks 홍제만
+i : 4
+s : ghdwpaks홍제만 ghdwpaks 홍제만
+i : 5
+s : ghdwpaks홍제만ghdwpaks 홍제만
+s : ghdwpaks홍제만ghdwpaks홍제만
+space_bar_loc : [8, 8, 8, 8, 11, 19]
+blank_loc : [4, 1, 1]
+dived_s : ['6768647770616b73', 'ed998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : 6768647770616b730000000000000000
+len(dived_s[i]) : 32
+len(dived_s[i])%16 : 0
+145 tempk : [['6', '7'], ['6', '8'], ['6', '4'], ['7', '7'], ['7', '0'], ['6', '1'], ['6', 'b'], ['7', '3'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0']]
+1 tempk[m] : ['6', '7']
+2 tempk[m] : 67
+tempk[m] : 103
+1 tempk[m] : ['6', '8']
+2 tempk[m] : 68
+tempk[m] : 104
+1 tempk[m] : ['6', '4']
+2 tempk[m] : 64
+tempk[m] : 100
+1 tempk[m] : ['7', '7']
+2 tempk[m] : 77
+tempk[m] : 119
+1 tempk[m] : ['7', '0']
+2 tempk[m] : 70
+tempk[m] : 112
+1 tempk[m] : ['6', '1']
+2 tempk[m] : 61
+tempk[m] : 97
+1 tempk[m] : ['6', 'b']
+2 tempk[m] : 6b
+tempk[m] : 107
+1 tempk[m] : ['7', '3']
+2 tempk[m] : 73
+tempk[m] : 115
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+153 tempk : [103, 104, 100, 119, 112, 97, 107, 115, 0, 0, 0, 0, 0, 0, 0, 0]
+res 1: 200, 182, 117, 166, 2, 34, 203, 255, 222, 183, 47, 150, 232, 132, 245, 75
+res 2: ['200', ' 182', ' 117', ' 166', ' 2', ' 34', ' 203', ' 255', ' 222', ' 183', ' 47', ' 150', ' 232', ' 132', ' 245', ' 75']
+res 3: ['0xc8', '0xb6', '0x75', '0xa6', '0x2', '0x22', '0xcb', '0xff', '0xde', '0xb7', '0x2f', '0x96', '0xe8', '0x84', '0xf5', '0x4b']
+(res[0])[2:] : c8
+res[0] : c8
+res 4: ['c8', 'b6', '75', 'a6', '2', '22', 'cb', 'ff', 'de', 'b7', '2f', '96', 'e8', '84', 'f5', '4b']
+type(res) : <class 'list'>
+i : 0
+j : 0
+dived_s : [['c8b675a6222cbffdeb72f96e884f54b'], 'ed998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : ['c8b675a6222cbffdeb72f96e884f54b']
+dived_s[i][j] : c8b675a6222cbffdeb72f96e884f54b
+145 tempk : [['c', '8'], ['b', '6'], ['7', '5'], ['a', '6'], ['2', '2'], ['2', 'c'], ['b', 'f'], ['f', 'd'], ['e', 'b'], ['7', '2'], ['f', '9'], ['6', 'e'], ['8', '8'], ['4', 'f'], ['5', '4'], ['b']]
+1 tempk[m] : ['c', '8']
+2 tempk[m] : c8
+tempk[m] : 200
+1 tempk[m] : ['b', '6']
+2 tempk[m] : b6
+tempk[m] : 182
+1 tempk[m] : ['7', '5']
+2 tempk[m] : 75
+tempk[m] : 117
+1 tempk[m] : ['a', '6']
+2 tempk[m] : a6
+tempk[m] : 166
+1 tempk[m] : ['2', '2']
+2 tempk[m] : 22
+tempk[m] : 34
+1 tempk[m] : ['2', 'c']
+2 tempk[m] : 2c
+tempk[m] : 44
+1 tempk[m] : ['b', 'f']
+2 tempk[m] : bf
+tempk[m] : 191
+1 tempk[m] : ['f', 'd']
+2 tempk[m] : fd
+tempk[m] : 253
+1 tempk[m] : ['e', 'b']
+2 tempk[m] : eb
+tempk[m] : 235
+1 tempk[m] : ['7', '2']
+2 tempk[m] : 72
+tempk[m] : 114
+1 tempk[m] : ['f', '9']
+2 tempk[m] : f9
+tempk[m] : 249
+1 tempk[m] : ['6', 'e']
+2 tempk[m] : 6e
+tempk[m] : 110
+1 tempk[m] : ['8', '8']
+2 tempk[m] : 88
+tempk[m] : 136
+1 tempk[m] : ['4', 'f']
+2 tempk[m] : 4f
+tempk[m] : 79
+1 tempk[m] : ['5', '4']
+2 tempk[m] : 54
+tempk[m] : 84
+1 tempk[m] : ['b']
+2 tempk[m] : b
+tempk[m] : 11
+153 tempk : [200, 182, 117, 166, 34, 44, 191, 253, 235, 114, 249, 110, 136, 79, 84, 11]
+res 1: 251, 215, 171, 154, 207, 246, 242, 238, 167, 7, 109, 6, 233, 154, 165, 59
+res 2: ['251', ' 215', ' 171', ' 154', ' 207', ' 246', ' 242', ' 238', ' 167', ' 7', ' 109', ' 6', ' 233', ' 154', ' 165', ' 59']
+res 3: ['0xfb', '0xd7', '0xab', '0x9a', '0xcf', '0xf6', '0xf2', '0xee', '0xa7', '0x7', '0x6d', '0x6', '0xe9', '0x9a', '0xa5', '0x3b']
+(res[0])[2:] : fb
+res[0] : fb
+res 4: ['fb', 'd7', 'ab', '9a', 'cf', 'f6', 'f2', 'ee', 'a7', '7', '6d', '6', 'e9', '9a', 'a5', '3b']
+type(res) : <class 'list'>
+i : 0
+j : 0
+dived_s : [['fbd7ab9acff6f2eea776d6e99aa53b'], 'ed998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : ['fbd7ab9acff6f2eea776d6e99aa53b']
+dived_s[i][j] : fbd7ab9acff6f2eea776d6e99aa53b
+145 tempk : [['f', 'b'], ['d', '7'], ['a', 'b'], ['9', 'a'], ['c', 'f'], ['f', '6'], ['f', '2'], ['e', 'e'], ['a', '7'], ['7', '6'], ['d', '6'], ['e', '9'], ['9', 'a'], ['a', '5'], ['3', 'b']]
+1 tempk[m] : ['f', 'b']
+2 tempk[m] : fb
+tempk[m] : 251
+1 tempk[m] : ['d', '7']
+2 tempk[m] : d7
+tempk[m] : 215
+1 tempk[m] : ['a', 'b']
+2 tempk[m] : ab
+tempk[m] : 171
+1 tempk[m] : ['9', 'a']
+2 tempk[m] : 9a
+tempk[m] : 154
+1 tempk[m] : ['c', 'f']
+2 tempk[m] : cf
+tempk[m] : 207
+1 tempk[m] : ['f', '6']
+2 tempk[m] : f6
+tempk[m] : 246
+1 tempk[m] : ['f', '2']
+2 tempk[m] : f2
+tempk[m] : 242
+1 tempk[m] : ['e', 'e']
+2 tempk[m] : ee
+tempk[m] : 238
+1 tempk[m] : ['a', '7']
+2 tempk[m] : a7
+tempk[m] : 167
+1 tempk[m] : ['7', '6']
+2 tempk[m] : 76
+tempk[m] : 118
+1 tempk[m] : ['d', '6']
+2 tempk[m] : d6
+tempk[m] : 214
+1 tempk[m] : ['e', '9']
+2 tempk[m] : e9
+tempk[m] : 233
+1 tempk[m] : ['9', 'a']
+2 tempk[m] : 9a
+tempk[m] : 154
+1 tempk[m] : ['a', '5']
+2 tempk[m] : a5
+tempk[m] : 165
+1 tempk[m] : ['3', 'b']
+2 tempk[m] : 3b
+tempk[m] : 59
+153 tempk : [251, 215, 171, 154, 207, 246, 242, 238, 167, 118, 214, 233, 154, 165, 59]
+Traceback (most recent call last):
+  File "20_div_str.py", line 156, in <module>
+    enc = list(aes.encrypt(bytes(tempk)))
+  File "20_div_str.py", line 22, in encrypt
+    enc = self.crypto.encrypt(data)
+  File "C:\Users\hjm79\AppData\Local\Programs\Python\Python38-32\lib\site-packages\Cryptodome\Cipher\_mode_cbc.py", line 183, in encrypt
+    raise ValueError("Data must be padded to %d byte boundary in CBC mode" % self.block_size)
+ValueError: Data must be padded to 16 byte boundary in CBC mode

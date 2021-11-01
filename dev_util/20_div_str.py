@@ -1,6 +1,5 @@
 
-import re
-
+import copy
 s = "ghdwpaks    홍제만 ghdwpaks 홍제만"
 
 def list_chunk(lst, n):
@@ -155,32 +154,33 @@ for i in range(len(dived_s)) :
             #tempk =  [14, 217, 152, 222, 202, 9, 206, 186, 14, 217, 152, 222, 202, 9, 206, 186]
             print("153 tempk :",tempk)
             enc = list(aes.encrypt(bytes(tempk)))
-            print("enc :",enc)
-            print("type(enc[0]) :",type(enc[0]))
-            enc[0] = str(enc[0])
-            enc[1] = str(enc[1])
-            enc[2] = str(enc[2])
-            enc[3] = str(enc[3])
-            enc[4] = str(enc[4])
-            enc[5] = str(enc[5])
-            enc[6] = str(enc[6])
-            enc[7] = str(enc[7])
-            enc[8] = str(enc[8])
-            enc[9] = str(enc[9])
-            enc[10] = str(enc[10])
-            enc[11] = str(enc[11])
-            enc[12] = str(enc[12])
-            enc[13] = str(enc[13])
-            
-            enc[14] = str(enc[14])
-            enc[15] = str(enc[15])
-            print("enc[14] :",enc[14])
-            print("enc[15] :",enc[15])
-            
-            res = "".join(enc)
-            print("res :",res)
-            temp = res
-        dived_s[i][j] = temp
+
+            res = copy.deepcopy(str(enc))
+            #res : [200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75]
+            res = res[1:-1]
+            #res : 200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75
+            print("res 1:",res)
+            res = res.split(",")
+            #res 2: ['200', ' 182', ' 117', ' 166', ' 2', ' 34', ' 203', ' 255', ' 222', ' 183', ' 47', ' 150', ' 232', ' 132', ' 245', ' 75']
+            print("res 2:",res)
+            for o in range(len(res)) :
+                res[o] = str(hex(int(res[o].strip())))
+            print("res 3:",res)
+            print("(res[0])[2:] :",(res[0])[2:])
+            res[0] = (res[0])[2:]
+            print("res[0] :",res[0])
+            for p in range(1,len(res)) :
+                res[p] = (res[p])[2:]
+            print("res 4:",res)
+            #print("res 3:",res)
+            print("type(res) :",type(res))
+            temp = "".join(res)
+            dived_s[i][j] = temp
+            print("i :",i)
+            print("j :",j)
+            print("dived_s :",dived_s)
+            print("dived_s[i] :",dived_s[i])
+            print("dived_s[i][j] :",dived_s[i][j])
     dived_s[i] = "".join(dived_s[i])
 
 
