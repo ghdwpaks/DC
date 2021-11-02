@@ -88,7 +88,7 @@ for i in range(1,len(s)) :
         temp = [s[i]]
     #print("\n\n\n")
 #print("dived_s :",dived_s)
-
+alpha = []
 for i in range(len(dived_s)) :
     if return_isalph(dived_s[i]) :
         temp = []
@@ -101,6 +101,7 @@ for i in range(len(dived_s)) :
         temp_res.insert(0,"g")
         temp_res = "".join(temp_res)
         '''
+        alpha.append(True)
         dived_s[i] = (temp_res)
     else :
         temp = []
@@ -122,69 +123,76 @@ for i in range(len(dived_s)) :
         temp_res.insert(0,"k")
         temp_res = "".join(temp_res)
         '''
+        alpha.append(False)
         dived_s[i] = (temp_res)
 print("dived_s :",dived_s)
 
 for i in range(len(dived_s)) :
     #print("len(dived_s[",i,"]) :",len(dived_s[i]))
     #print("1 dived_s[{}] : {}".format(i,dived_s[i]))
-    dived_s[i] =dived_s[i] + (len(dived_s[i]) % (BLOCK_SIZE*2))*"0"
-    print("dived_s[i] :",dived_s[i])
-    print("len(dived_s[i]) :",len(dived_s[i]))
-    print("len(dived_s[i])%16 :",len(dived_s[i])%(BLOCK_SIZE*2))
+    print("1 dived_s[i] :",dived_s[i])
+    print("1 len(dived_s[i]) :",len(dived_s[i]))
+    print("1 BLOCK_SIZE * 2 :",BLOCK_SIZE*2)
+    print("1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) :",((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))))
+    dived_s[i] =dived_s[i] + ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2)))*"0"
     #print("2 dived_s[{}] : {}".format(i,dived_s[i]))
-    
     dived_s[i] = list_chunk(list(dived_s[i]),BLOCK_SIZE*2)
     #dived_s[i] = ["0ed998deca09ceba0ed998deca09ceba","78c0ed998deca09c78c0ed998deca09c"]
-    for j in range(len(dived_s[i])) :
-        temp = dived_s[i][j]
-        #temp = "0ed998deca09ceba0ed998deca09ceba"
-        for k in range(len(temp)) :
-            temp = list(temp)
-            #temp = ['0', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '0', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a']
-            tempk = list_chunk(temp,2)
-            #tempk = [['0', 'e'], ['d', '9'], ['9', '8'], ['d', 'e'], ['c', 'a'], ['0', '9'], ['c', 'e'], ['b', 'a'], ['0', 'e'], ['d', '9'], ['9', '8'], ['d', 'e'], ['c', 'a'], ['0', '9'], ['c', 'e'], ['b', 'a']]
-            print("145 tempk :",tempk)
-            for m in range(len(tempk)) :
-                print("1 tempk[m] :",tempk[m])
-                tempk[m] = "".join(tempk[m])
-                print("2 tempk[m] :",tempk[m])
-                tempk[m] = int(("0x"+tempk[m]),16)
-                print("tempk[m] :",tempk[m])
-            #tempk =  [14, 217, 152, 222, 202, 9, 206, 186, 14, 217, 152, 222, 202, 9, 206, 186]
-            print("153 tempk :",tempk)
-            enc = list(aes.encrypt(bytes(tempk)))
+    print("2 dived_s[i] :",dived_s[i])
+    print("2 len(dived_s[i]) :",len(dived_s[i]))
+    temp = dived_s[i]
+    #temp = "0ed998deca09ceba0ed998deca09ceba"
 
-            res = copy.deepcopy(str(enc))
-            #res : [200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75]
-            res = res[1:-1]
-            #res : 200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75
-            print("res 1:",res)
-            res = res.split(",")
-            #res 2: ['200', ' 182', ' 117', ' 166', ' 2', ' 34', ' 203', ' 255', ' 222', ' 183', ' 47', ' 150', ' 232', ' 132', ' 245', ' 75']
-            print("res 2:",res)
-            for o in range(len(res)) :
-                res[o] = str(hex(int(res[o].strip())))
-            print("res 3:",res)
-            print("(res[0])[2:] :",(res[0])[2:])
-            res[0] = (res[0])[2:]
-            print("res[0] :",res[0])
-            for p in range(1,len(res)) :
-                res[p] = (res[p])[2:]
-            print("res 4:",res)
-            #print("res 3:",res)
-            print("type(res) :",type(res))
-            temp = "".join(res)
-            dived_s[i][j] = temp
-            print("i :",i)
-            print("j :",j)
-            print("dived_s :",dived_s)
-            print("dived_s[i] :",dived_s[i])
-            print("dived_s[i][j] :",dived_s[i][j])
-    dived_s[i] = "".join(dived_s[i])
+    for k in range(len(temp)) :
+        temp = list(temp)
+        print("143 temp :",temp)
+        #temp = ['0', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '0', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a']
+        tempk = list_chunk(temp[k],2)
+        #tempk = [['0', 'e'], ['d', '9'], ['9', '8'], ['d', 'e'], ['c', 'a'], ['0', '9'], ['c', 'e'], ['b', 'a'], ['0', 'e'], ['d', '9'], ['9', '8'], ['d', 'e'], ['c', 'a'], ['0', '9'], ['c', 'e'], ['b', 'a']]
+        print("145 tempk :",tempk)
+        for m in range(len(tempk)) :
+            print("1 tempk[m] :",tempk[m])
+            tempk[m] = "".join(tempk[m])
+            print("2 tempk[m] :",tempk[m])
+            tempk[m] = int(("0x"+tempk[m]),16)
+            print("tempk[m] :",tempk[m])
+        #tempk =  [14, 217, 152, 222, 202, 9, 206, 186, 14, 217, 152, 222, 202, 9, 206, 186]
+        print("153 tempk :",tempk)
+        enc = list(aes.encrypt(bytes(tempk)))
+        
+        res = copy.deepcopy(str(enc))
+        #res : [200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75]
+        res = res[1:-1]
+        #res : 200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75
+        print("res 1:",res)
+        res = res.split(",")
+        #res 2: ['200', ' 182', ' 117', ' 166', ' 2', ' 34', ' 203', ' 255', ' 222', ' 183', ' 47', ' 150', ' 232', ' 132', ' 245', ' 75']
+        print("res 2:",res)
+        for o in range(len(res)) :
+            res[o] = str(hex(int(res[o].strip())))
+        print("res 3:",res)
+        print("(res[0])[2:] :",(res[0])[2:])
+        res[0] = (res[0])[2:]
+        print("res[0] :",res[0])
+        for p in range(1,len(res)) :
+            res[p] = (res[p])[2:]
+            res[p] = FillUp0(res[p],2)
+        print("res 4:",res)
+        #print("res 3:",res)
+        print("type(res) :",type(res))
+        temp = "".join(res)
+        print("temp :",temp)
+        dived_s[i] = temp
+        print("i :",i)
+        print("dived_s[i] :",dived_s[i])
+    print("exited")
+    print("dived_s :",dived_s)
+    print("dived_s[i] :",dived_s[i])
+    print("len(dived_s[i]) :",len(dived_s[i]))
+    print("len(dived_s[i])%32 :",len(dived_s[i])%(BLOCK_SIZE*2))
 
 
-
+    '''
     if return_isalph(dived_s[i]) :
         dived_s[i] = list(dived_s[i])
         dived_s[i].insert(0,"g")
@@ -193,10 +201,18 @@ for i in range(len(dived_s)) :
         dived_s[i] = list(dived_s[i])
         dived_s[i].insert(0,"k")
         dived_s[i] = "".join(dived_s[i])
+    '''
 
-
-
-
+print("final exited")
+print("dived_s :",dived_s)
+for i in range(len(alpha)) :
+    dived_s[i] = list(dived_s[i])
+    if alpha[i] :
+        dived_s[i].insert(0,"g")
+    else :
+        dived_s[i].insert(0,"k")
+    dived_s[i] = "".join(dived_s[i])
+        
 
 res = ""
 for i in range(len(blank_loc)) :
@@ -205,7 +221,7 @@ for i in range(len(blank_loc)) :
         res += "."
 res += dived_s[-1]
 print("res :",res)
-
+print(alpha)
 
 '''
 res : g6768647770616b73....ked998deca09ceba78c.g6768647770616b73.ked998deca09ceba78c
@@ -227,13 +243,6 @@ utf-8을 따라 인코딩된것을 중요 부분만 추출한것이다.
 이중에서 필요 없는 것은 b , ' , \ x 이다.
 b'\ x ed \ x 99 \ x 8d' 을 ed998d 로 바꿔줬다.
 이런식으로 변환된다.
-
-현재로써는 암호화가 적용되지 않은 상태이지만. 이런 예문이 완성돼서 클라이언트의 영역으로 넘어가기 전에 암호화를 반드시 시켜야한다.
-.은 암호화를 할 수 없는 대상이기 때문이다.
-만약 암호화 함수를 적용시키게 된다면 아마 예문만을 저장한 dived_s가 완성된 부분과
-(이 부분의 결과물을 알리는)res변수가 생성 및 완성되기 전에 부분에 추가할 예정이다.
-
-
 
 '''
 
