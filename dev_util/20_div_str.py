@@ -26,10 +26,25 @@ class AESCryptoCBC():
         #복호화 enc는 16의 배수여야 한다.
         dec = self.crypto.decrypt(enc)
         return dec
+'''
+import socket
+socket.gethostname()
+'DESKTOP-EPE6PMI'
 
-from Cryptodome import Random   
+'''
 from Cryptodome.Cipher import AES 
-key = [0x10, 0x01, 0x15, 0x1B, 0xA1, 0x11, 0x57, 0x72, 0x6C, 0x21, 0x56, 0x57, 0x62, 0x16, 0x05, 0x3D, 0xFF, 0xFE, 0x11, 0x1B, 0x21, 0x31, 0x57, 0x72, 0x6B, 0x21, 0xA6,0xA7, 0x6E, 0xE6, 0xE5, 0x3F]
+import socket
+real_name = (str(socket.gethostname()).split("-"))[1]
+
+real_name_multiply = (32 // len(real_name))+1
+real_name = (real_name * real_name_multiply)[:32]
+real_name = list(real_name)
+for i in range(len(real_name)) :
+    real_name[i] = ord(real_name[i])
+print("real_name :",real_name)
+print("len(real_name) :",len(real_name))
+key = copy.deepcopy(real_name)         
+
 aes = AESCryptoCBC(bytes(key))
 print("aes :",aes)
 
