@@ -1,6 +1,6 @@
 
 import copy
-s = "ghdwpaks    홍제만 ghdwpaks 홍제만"
+s = "ghdwpaks 홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만"
 
 def list_chunk(lst, n):
         return [lst[i:i+n] for i in range(0, len(lst), n)]
@@ -102,7 +102,7 @@ for i in range(1,len(s)) :
         dived_s.append("".join(temp))
         temp = [s[i]]
     #print("\n\n\n")
-#print("dived_s :",dived_s)
+#print("1 dived_s :",dived_s)
 alpha = []
 for i in range(len(dived_s)) :
     if return_isalph(dived_s[i]) :
@@ -140,7 +140,28 @@ for i in range(len(dived_s)) :
         '''
         alpha.append(False)
         dived_s[i] = (temp_res)
-print("dived_s :",dived_s)
+print("143 dived_s :",dived_s)
+'''
+dived_s 259 : ['ge5c8a2991a0aebfa018a33e24fe49f44', 'k1e319151c2668319b69803d54b80933d', 'g0da63d40419246f111ab026bea6f8c8', 'ka7c951b92d38ef9bffcc18e8e2bb97d', 'd93c252a2c8c2a430ab4a177b9404fe']
+dived_s 259 : ['ge5c8a2991a0aebfa018a33e24fe49f44', 'k205c98f3247cab0a7d5f60bcc07a3456', 'g2483bcfb24a41851504b9a29b7c6e0c9', 'kc1ede9dcab46ab2e14af01c5414544e2', '8204f60a68a7af1187f2c3f309d7a5a8']
+'''
+extend_loc = []
+for i in range(len(dived_s)) :
+    if len(dived_s[i]) > 32 :
+        extend_loc.append(i)
+        temp = copy.deepcopy(dived_s[i])
+        temp = list(temp)
+        temp = [temp[:31],temp[31:]]
+        for j in range(len(temp)) :
+            temp[j] = "".join(temp[j])
+        print("temp 154 :",temp)
+        del dived_s[i]
+        for j in range(len(temp)) :
+            dived_s.insert(i+j,temp[j])
+        print("temp :",temp)
+        print("dived_s :",dived_s)
+print("154 2 dived_s :",dived_s)
+print("154 2 extend_loc :",extend_loc)
 
 for i in range(len(dived_s)) :
     #print("len(dived_s[",i,"]) :",len(dived_s[i]))
@@ -228,12 +249,23 @@ for i in range(len(alpha)) :
         dived_s[i].insert(0,"k")
     dived_s[i] = "".join(dived_s[i])
         
+print("dived_s 259 :",dived_s)
+print("\n\n\n")
+for i in range(len(extend_loc)-1,0,-1) :
+    print("257 i :",i)
+    print("extend_loc[i] :",extend_loc[i])
+    temp = '_'.join([dived_s[i],dived_s[i+1]])
+    print("temp :",temp)
+    del dived_s[extend_loc[i]]
+    dived_s.insert(extend_loc[i]-1,temp)
+    print("dived_s :",dived_s)
+
 
 res = ""
 for i in range(len(blank_loc)) :
     res += dived_s[i]
     for j in range(blank_loc[i]) :
-        res += "."
+        res += "."  
 res += dived_s[-1]
 print("res :",res)
 print(alpha)

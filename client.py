@@ -1,6 +1,6 @@
 import socket
 
-cli_HOST = '192.168.1.74'
+cli_HOST = '127.0.0.1'
 cli_PORT = 9999
 
 print("cli")

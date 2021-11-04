@@ -1,7 +1,7 @@
 import socket
 
-ser_HOST = '192.168.1.22'
-ser_PORT = 9998
+ser_HOST = '127.0.0.1'
+ser_PORT = 9999
 
 print("ser")
 
