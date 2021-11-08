@@ -259,6 +259,22 @@ for i in range(len(dived_s)) :
         dived_s[i] = "".join(dived_s[i])
     '''
 
+        
+print("dived_s 259 :",dived_s)
+print("extend_loc :",extend_loc) #[2,3,4]
+#dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+print("\n\n\n")
+for i in range(len(extend_loc)) :
+    print("257 i :",i)
+    print("extend_loc[i] :",extend_loc[i])
+    temp = '_'.join([dived_s[extend_loc[i]-i],dived_s[(extend_loc[i]+1)-i]])
+    del dived_s[extend_loc[i]-i]
+    del dived_s[extend_loc[i]-i]
+    dived_s.insert(extend_loc[i]-i,temp)
+    print("temp :",temp)
+    
+    print("dived_s :",dived_s)
+
 print("final exited")
 print("dived_s :",dived_s)
 for i in range(len(alpha)) :
@@ -266,19 +282,9 @@ for i in range(len(alpha)) :
     print("alpha[",i,"] :",alpha[i])
     dived_s[i].insert(0,alpha[i])
     dived_s[i] = "".join(dived_s[i])
-        
-print("dived_s 259 :",dived_s)
-print("\n\n\n")
-for i in range(len(extend_loc)-1,0,-1) :
-    print("257 i :",i)
-    print("extend_loc[i] :",extend_loc[i])
-    temp = '_'.join([dived_s[i],dived_s[i+1]])
-    print("temp :",temp)
-    del dived_s[extend_loc[i]]
-    dived_s.insert(extend_loc[i]-1,temp)
-    print("dived_s :",dived_s)
-
-
+print("="*20)
+print("281 dived_s :",dived_s)
+print("="*20)
 res = ""
 for i in range(len(blank_loc)) :
     res += dived_s[i]
@@ -287,7 +293,103 @@ for i in range(len(blank_loc)) :
 res += dived_s[-1]
 print("res :",res)
 print("alpha :",alpha)
+#s = "ghdwpaks 123 홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만"
+'''
+281 dived_s : ['gd1c61a2f633708a7f802914917e62833', 'n6df2938405ff970dad859019c4552602', 'k6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'gd82c84bbd9b7f4938daff2cebafcc213', 'k898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
 
+
+iisalpha == tisalpha  : True
+1 dived_s : ['ghdwpaks', '123', '홍제만홍제만홍제만홍제만홍제만홍제만', 'ghdwpaks', '홍제만']
+143 dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c']
+temp : ['ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c']
+temp : ['ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c']
+temp : ['a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+154 2 dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+154 2 extend_loc : [2, 3, 4]
+1 dived_s[i] : 6768647770616b73
+
+dived_s 259 : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7','87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+
+
+
+
+257 i : 2
+extend_loc[i] : 4
+temp : d82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', 'd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4', '898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', 'd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+257 i : 1
+extend_loc[i] : 3
+temp : 6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', '6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+final exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', '6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+alpha[ 0 ] : g
+alpha[ 1 ] : n
+alpha[ 2 ] : k
+alpha[ 3 ] : g
+alpha[ 4 ] : k
+====================
+281 dived_s : ['gd1c61a2f633708a7f802914917e62833', 'n6df2938405ff970dad859019c4552602', 'k6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'gd82c84bbd9b7f4938daff2cebafcc213', 'k898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+====================
+res : gd1c61a2f633708a7f802914917e62833.n6df2938405ff970dad859019c4552602.k6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213.gd82c84bbd9b7f4938daff2cebafcc213.366b49f2ee3f22fb063465d8b6baef3c
+alpha : ['g', 'n', 'k', 'g', 'k']
+
+
+dived_s 259 : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+extend_loc : [2, 3, 4]
+
+
+
+
+257 i : 0
+extend_loc[i] : 2
+temp : d82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+257 i : 1
+extend_loc[i] : 3
+temp : d82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4_6ec4673d5c8e55d78b629190e90bb7f7
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4_6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+257 i : 2
+extend_loc[i] : 4
+temp : d82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4_6ec4673d5c8e55d78b629190e90bb7f7_87be00c786c23bcba2730816edb95e62
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4_6ec4673d5c8e55d78b629190e90bb7f7_87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+final exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4_6ec4673d5c8e55d78b629190e90bb7f7_87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+alpha[ 0 ] : g
+alpha[ 1 ] : n
+alpha[ 2 ] : k
+alpha[ 3 ] : g
+alpha[ 4 ] : k
+====================
+281 dived_s : ['gd1c61a2f633708a7f802914917e62833', 'n6df2938405ff970dad859019c4552602', 'kd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4_6ec4673d5c8e55d78b629190e90bb7f7_87be00c786c23bcba2730816edb95e62', 'g7a2c72be86c1951299e3d7c451e9ca28', 'k366b49f2ee3f22fb063465d8b6baef3c']
+====================
+res : gd1c61a2f633708a7f802914917e62833.n6df2938405ff970dad859019c4552602.kd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4_6ec4673d5c8e55d78b629190e90bb7f7_87be00c786c23bcba2730816edb95e62.g7a2c72be86c1951299e3d7c451e9ca28.k366b49f2ee3f22fb063465d8b6baef3c
+alpha : ['g', 'n', 'k', 'g', 'k']
+
+
+
+143 dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c']
+temp : ['ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c']
+temp : ['ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c']
+temp : ['a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+154 2 dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+154 2 extend_loc : [2, 3, 4]
+
+
+'''
 '''
 res : g6768647770616b73....ked998deca09ceba78c.g6768647770616b73.ked998deca09ceba78c
 예문에 대한 설명
