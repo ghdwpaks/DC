@@ -1,0 +1,750 @@
+
+C:\workspace\dc\dev_util>python 20_div_str.py
+real_name : [72, 67, 66, 56, 75, 77, 77, 72, 67, 66, 56, 75, 77, 77, 72, 67, 66, 56, 75, 77, 77, 72, 67, 66, 56, 75, 77, 77, 72, 67, 66, 56]
+len(real_name) : 32
+aes : <__main__.AESCryptoCBC object at 0x0152A3A0>
+i : 0
+s : ghdwpaks 123 홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만
+i : 1
+s : ghdwpaks123 홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만
+i : 2
+s : ghdwpaks123홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만
+i : 3
+s : ghdwpaks123홍제만홍제만홍제만홍제만홍제만홍제만ghdwpaks 홍제만
+s : ghdwpaks123홍제만홍제만홍제만홍제만홍제만홍제만ghdwpaks홍제만
+space_bar_loc : [8, 11, 29, 37]
+blank_loc : [1, 1, 1, 1]
+88 s : ['g', 'h', 'd', 'w', 'p', 'a', 'k', 's', '1', '2', '3', '홍', '제', '만', '홍', '제', '만', '홍', '제', '만', '홍', '제', '만', '홍', '제', '만', '홍', '제', '만', 'g', 'h', 'd', 'w', 'p', 'a', 'k', 's', '홍', '제', '만']
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : n
+tisalpha : g
+iisalpha == tisalpha  : False
+iisalpha : n
+tisalpha : n
+iisalpha == tisalpha  : True
+iisalpha : n
+tisalpha : n
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : n
+iisalpha == tisalpha  : False
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : k
+iisalpha == tisalpha  : False
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : g
+tisalpha : g
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : g
+iisalpha == tisalpha  : False
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+iisalpha : k
+tisalpha : k
+iisalpha == tisalpha  : True
+1 dived_s : ['ghdwpaks', '123', '홍제만홍제만홍제만홍제만홍제만홍제만', 'ghdwpaks', '홍제만']
+143 dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c']
+temp : ['ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c']
+temp : ['ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+temp 154 : ['a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c']
+temp : ['a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c']
+dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+154 2 dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+154 2 extend_loc : [2, 3, 4]
+1 dived_s[i] : 6768647770616b73
+1 len(dived_s[i]) : 16
+1 BLOCK_SIZE * 2 : 32
+1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) : 16
+2 dived_s[i] : [['6', '7', '6', '8', '6', '4', '7', '7', '7', '0', '6', '1', '6', 'b', '7', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+2 len(dived_s[i]) : 1
+143 temp : [['6', '7', '6', '8', '6', '4', '7', '7', '7', '0', '6', '1', '6', 'b', '7', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+145 tempk : [['6', '7'], ['6', '8'], ['6', '4'], ['7', '7'], ['7', '0'], ['6', '1'], ['6', 'b'], ['7', '3'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0']]
+1 tempk[m] : ['6', '7']
+2 tempk[m] : 67
+tempk[m] : 103
+1 tempk[m] : ['6', '8']
+2 tempk[m] : 68
+tempk[m] : 104
+1 tempk[m] : ['6', '4']
+2 tempk[m] : 64
+tempk[m] : 100
+1 tempk[m] : ['7', '7']
+2 tempk[m] : 77
+tempk[m] : 119
+1 tempk[m] : ['7', '0']
+2 tempk[m] : 70
+tempk[m] : 112
+1 tempk[m] : ['6', '1']
+2 tempk[m] : 61
+tempk[m] : 97
+1 tempk[m] : ['6', 'b']
+2 tempk[m] : 6b
+tempk[m] : 107
+1 tempk[m] : ['7', '3']
+2 tempk[m] : 73
+tempk[m] : 115
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+153 tempk : [103, 104, 100, 119, 112, 97, 107, 115, 0, 0, 0, 0, 0, 0, 0, 0]
+res 1: 209, 198, 26, 47, 99, 55, 8, 167, 248, 2, 145, 73, 23, 230, 40, 51
+res 2: ['209', ' 198', ' 26', ' 47', ' 99', ' 55', ' 8', ' 167', ' 248', ' 2', ' 145', ' 73', ' 23', ' 230', ' 40', ' 51']
+res 3: ['0xd1', '0xc6', '0x1a', '0x2f', '0x63', '0x37', '0x8', '0xa7', '0xf8', '0x2', '0x91', '0x49', '0x17', '0xe6', '0x28', '0x33']
+(res[0])[2:] : d1
+res[0] : d1
+res 4: ['d1', 'c6', '1a', '2f', '63', '37', '08', 'a7', 'f8', '02', '91', '49', '17', 'e6', '28', '33']
+type(res) : <class 'list'>
+temp : d1c61a2f633708a7f802914917e62833
+i : 0
+dived_s[i] : d1c61a2f633708a7f802914917e62833
+exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : d1c61a2f633708a7f802914917e62833
+len(dived_s[i]) : 32
+len(dived_s[i])%32 : 0
+1 dived_s[i] : 313233
+1 len(dived_s[i]) : 6
+1 BLOCK_SIZE * 2 : 32
+1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) : 26
+2 dived_s[i] : [['3', '1', '3', '2', '3', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+2 len(dived_s[i]) : 1
+143 temp : [['3', '1', '3', '2', '3', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+145 tempk : [['3', '1'], ['3', '2'], ['3', '3'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0']]
+1 tempk[m] : ['3', '1']
+2 tempk[m] : 31
+tempk[m] : 49
+1 tempk[m] : ['3', '2']
+2 tempk[m] : 32
+tempk[m] : 50
+1 tempk[m] : ['3', '3']
+2 tempk[m] : 33
+tempk[m] : 51
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+153 tempk : [49, 50, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+res 1: 109, 242, 147, 132, 5, 255, 151, 13, 173, 133, 144, 25, 196, 85, 38, 2
+res 2: ['109', ' 242', ' 147', ' 132', ' 5', ' 255', ' 151', ' 13', ' 173', ' 133', ' 144', ' 25', ' 196', ' 85', ' 38', ' 2']
+res 3: ['0x6d', '0xf2', '0x93', '0x84', '0x5', '0xff', '0x97', '0xd', '0xad', '0x85', '0x90', '0x19', '0xc4', '0x55', '0x26', '0x2']
+(res[0])[2:] : 6d
+res[0] : 6d
+res 4: ['6d', 'f2', '93', '84', '05', 'ff', '97', '0d', 'ad', '85', '90', '19', 'c4', '55', '26', '02']
+type(res) : <class 'list'>
+temp : 6df2938405ff970dad859019c4552602
+i : 1
+dived_s[i] : 6df2938405ff970dad859019c4552602
+exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : 6df2938405ff970dad859019c4552602
+len(dived_s[i]) : 32
+len(dived_s[i])%32 : 0
+1 dived_s[i] : ed998deca09ceba78ced998deca09ce
+1 len(dived_s[i]) : 31
+1 BLOCK_SIZE * 2 : 32
+1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) : 1
+2 dived_s[i] : [['e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', '0']]
+2 len(dived_s[i]) : 1
+143 temp : [['e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', '0']]
+145 tempk : [['e', 'd'], ['9', '9'], ['8', 'd'], ['e', 'c'], ['a', '0'], ['9', 'c'], ['e', 'b'], ['a', '7'], ['8', 'c'], ['e', 'd'], ['9', '9'], ['8', 'd'], ['e', 'c'], ['a', '0'], ['9', 'c'], ['e', '0']]
+1 tempk[m] : ['e', 'd']
+2 tempk[m] : ed
+tempk[m] : 237
+1 tempk[m] : ['9', '9']
+2 tempk[m] : 99
+tempk[m] : 153
+1 tempk[m] : ['8', 'd']
+2 tempk[m] : 8d
+tempk[m] : 141
+1 tempk[m] : ['e', 'c']
+2 tempk[m] : ec
+tempk[m] : 236
+1 tempk[m] : ['a', '0']
+2 tempk[m] : a0
+tempk[m] : 160
+1 tempk[m] : ['9', 'c']
+2 tempk[m] : 9c
+tempk[m] : 156
+1 tempk[m] : ['e', 'b']
+2 tempk[m] : eb
+tempk[m] : 235
+1 tempk[m] : ['a', '7']
+2 tempk[m] : a7
+tempk[m] : 167
+1 tempk[m] : ['8', 'c']
+2 tempk[m] : 8c
+tempk[m] : 140
+1 tempk[m] : ['e', 'd']
+2 tempk[m] : ed
+tempk[m] : 237
+1 tempk[m] : ['9', '9']
+2 tempk[m] : 99
+tempk[m] : 153
+1 tempk[m] : ['8', 'd']
+2 tempk[m] : 8d
+tempk[m] : 141
+1 tempk[m] : ['e', 'c']
+2 tempk[m] : ec
+tempk[m] : 236
+1 tempk[m] : ['a', '0']
+2 tempk[m] : a0
+tempk[m] : 160
+1 tempk[m] : ['9', 'c']
+2 tempk[m] : 9c
+tempk[m] : 156
+1 tempk[m] : ['e', '0']
+2 tempk[m] : e0
+tempk[m] : 224
+153 tempk : [237, 153, 141, 236, 160, 156, 235, 167, 140, 237, 153, 141, 236, 160, 156, 224]
+res 1: 216, 44, 132, 187, 217, 183, 244, 147, 141, 175, 242, 206, 186, 252, 194, 19
+res 2: ['216', ' 44', ' 132', ' 187', ' 217', ' 183', ' 244', ' 147', ' 141', ' 175', ' 242', ' 206', ' 186', ' 252', ' 194', ' 19']
+res 3: ['0xd8', '0x2c', '0x84', '0xbb', '0xd9', '0xb7', '0xf4', '0x93', '0x8d', '0xaf', '0xf2', '0xce', '0xba', '0xfc', '0xc2', '0x13']
+(res[0])[2:] : d8
+res[0] : d8
+res 4: ['d8', '2c', '84', 'bb', 'd9', 'b7', 'f4', '93', '8d', 'af', 'f2', 'ce', 'ba', 'fc', 'c2', '13']
+type(res) : <class 'list'>
+temp : d82c84bbd9b7f4938daff2cebafcc213
+i : 2
+dived_s[i] : d82c84bbd9b7f4938daff2cebafcc213
+exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : d82c84bbd9b7f4938daff2cebafcc213
+len(dived_s[i]) : 32
+len(dived_s[i])%32 : 0
+1 dived_s[i] : ba78ced998deca09ceba78ced998dec
+1 len(dived_s[i]) : 31
+1 BLOCK_SIZE * 2 : 32
+1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) : 1
+2 dived_s[i] : [['b', 'a', '7', '8', 'c', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', '0']]
+2 len(dived_s[i]) : 1
+143 temp : [['b', 'a', '7', '8', 'c', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', '0']]
+145 tempk : [['b', 'a'], ['7', '8'], ['c', 'e'], ['d', '9'], ['9', '8'], ['d', 'e'], ['c', 'a'], ['0', '9'], ['c', 'e'], ['b', 'a'], ['7', '8'], ['c', 'e'], ['d', '9'], ['9', '8'], ['d', 'e'], ['c', '0']]
+1 tempk[m] : ['b', 'a']
+2 tempk[m] : ba
+tempk[m] : 186
+1 tempk[m] : ['7', '8']
+2 tempk[m] : 78
+tempk[m] : 120
+1 tempk[m] : ['c', 'e']
+2 tempk[m] : ce
+tempk[m] : 206
+1 tempk[m] : ['d', '9']
+2 tempk[m] : d9
+tempk[m] : 217
+1 tempk[m] : ['9', '8']
+2 tempk[m] : 98
+tempk[m] : 152
+1 tempk[m] : ['d', 'e']
+2 tempk[m] : de
+tempk[m] : 222
+1 tempk[m] : ['c', 'a']
+2 tempk[m] : ca
+tempk[m] : 202
+1 tempk[m] : ['0', '9']
+2 tempk[m] : 09
+tempk[m] : 9
+1 tempk[m] : ['c', 'e']
+2 tempk[m] : ce
+tempk[m] : 206
+1 tempk[m] : ['b', 'a']
+2 tempk[m] : ba
+tempk[m] : 186
+1 tempk[m] : ['7', '8']
+2 tempk[m] : 78
+tempk[m] : 120
+1 tempk[m] : ['c', 'e']
+2 tempk[m] : ce
+tempk[m] : 206
+1 tempk[m] : ['d', '9']
+2 tempk[m] : d9
+tempk[m] : 217
+1 tempk[m] : ['9', '8']
+2 tempk[m] : 98
+tempk[m] : 152
+1 tempk[m] : ['d', 'e']
+2 tempk[m] : de
+tempk[m] : 222
+1 tempk[m] : ['c', '0']
+2 tempk[m] : c0
+tempk[m] : 192
+153 tempk : [186, 120, 206, 217, 152, 222, 202, 9, 206, 186, 120, 206, 217, 152, 222, 192]
+res 1: 137, 141, 95, 156, 105, 227, 20, 147, 88, 100, 4, 108, 163, 97, 55, 180
+res 2: ['137', ' 141', ' 95', ' 156', ' 105', ' 227', ' 20', ' 147', ' 88', ' 100', ' 4', ' 108', ' 163', ' 97', ' 55', ' 180']
+res 3: ['0x89', '0x8d', '0x5f', '0x9c', '0x69', '0xe3', '0x14', '0x93', '0x58', '0x64', '0x4', '0x6c', '0xa3', '0x61', '0x37', '0xb4']
+(res[0])[2:] : 89
+res[0] : 89
+res 4: ['89', '8d', '5f', '9c', '69', 'e3', '14', '93', '58', '64', '04', '6c', 'a3', '61', '37', 'b4']
+type(res) : <class 'list'>
+temp : 898d5f9c69e314935864046ca36137b4
+i : 3
+dived_s[i] : 898d5f9c69e314935864046ca36137b4
+exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : 898d5f9c69e314935864046ca36137b4
+len(dived_s[i]) : 32
+len(dived_s[i])%32 : 0
+1 dived_s[i] : a09ceba78ced998deca09ceba78ced9
+1 len(dived_s[i]) : 31
+1 BLOCK_SIZE * 2 : 32
+1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) : 1
+2 dived_s[i] : [['a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', 'e', 'd', '9', '0']]
+2 len(dived_s[i]) : 1
+143 temp : [['a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', 'e', 'd', '9', '0']]
+145 tempk : [['a', '0'], ['9', 'c'], ['e', 'b'], ['a', '7'], ['8', 'c'], ['e', 'd'], ['9', '9'], ['8', 'd'], ['e', 'c'], ['a', '0'], ['9', 'c'], ['e', 'b'], ['a', '7'], ['8', 'c'], ['e', 'd'], ['9', '0']]
+1 tempk[m] : ['a', '0']
+2 tempk[m] : a0
+tempk[m] : 160
+1 tempk[m] : ['9', 'c']
+2 tempk[m] : 9c
+tempk[m] : 156
+1 tempk[m] : ['e', 'b']
+2 tempk[m] : eb
+tempk[m] : 235
+1 tempk[m] : ['a', '7']
+2 tempk[m] : a7
+tempk[m] : 167
+1 tempk[m] : ['8', 'c']
+2 tempk[m] : 8c
+tempk[m] : 140
+1 tempk[m] : ['e', 'd']
+2 tempk[m] : ed
+tempk[m] : 237
+1 tempk[m] : ['9', '9']
+2 tempk[m] : 99
+tempk[m] : 153
+1 tempk[m] : ['8', 'd']
+2 tempk[m] : 8d
+tempk[m] : 141
+1 tempk[m] : ['e', 'c']
+2 tempk[m] : ec
+tempk[m] : 236
+1 tempk[m] : ['a', '0']
+2 tempk[m] : a0
+tempk[m] : 160
+1 tempk[m] : ['9', 'c']
+2 tempk[m] : 9c
+tempk[m] : 156
+1 tempk[m] : ['e', 'b']
+2 tempk[m] : eb
+tempk[m] : 235
+1 tempk[m] : ['a', '7']
+2 tempk[m] : a7
+tempk[m] : 167
+1 tempk[m] : ['8', 'c']
+2 tempk[m] : 8c
+tempk[m] : 140
+1 tempk[m] : ['e', 'd']
+2 tempk[m] : ed
+tempk[m] : 237
+1 tempk[m] : ['9', '0']
+2 tempk[m] : 90
+tempk[m] : 144
+153 tempk : [160, 156, 235, 167, 140, 237, 153, 141, 236, 160, 156, 235, 167, 140, 237, 144]
+res 1: 110, 196, 103, 61, 92, 142, 85, 215, 139, 98, 145, 144, 233, 11, 183, 247
+res 2: ['110', ' 196', ' 103', ' 61', ' 92', ' 142', ' 85', ' 215', ' 139', ' 98', ' 145', ' 144', ' 233', ' 11', ' 183', ' 247']
+res 3: ['0x6e', '0xc4', '0x67', '0x3d', '0x5c', '0x8e', '0x55', '0xd7', '0x8b', '0x62', '0x91', '0x90', '0xe9', '0xb', '0xb7', '0xf7']
+(res[0])[2:] : 6e
+res[0] : 6e
+res 4: ['6e', 'c4', '67', '3d', '5c', '8e', '55', 'd7', '8b', '62', '91', '90', 'e9', '0b', 'b7', 'f7']
+type(res) : <class 'list'>
+temp : 6ec4673d5c8e55d78b629190e90bb7f7
+i : 4
+dived_s[i] : 6ec4673d5c8e55d78b629190e90bb7f7
+exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : 6ec4673d5c8e55d78b629190e90bb7f7
+len(dived_s[i]) : 32
+len(dived_s[i])%32 : 0
+1 dived_s[i] : 98deca09ceba78c
+1 len(dived_s[i]) : 15
+1 BLOCK_SIZE * 2 : 32
+1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) : 17
+2 dived_s[i] : [['9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+2 len(dived_s[i]) : 1
+143 temp : [['9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+145 tempk : [['9', '8'], ['d', 'e'], ['c', 'a'], ['0', '9'], ['c', 'e'], ['b', 'a'], ['7', '8'], ['c', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0']]
+1 tempk[m] : ['9', '8']
+2 tempk[m] : 98
+tempk[m] : 152
+1 tempk[m] : ['d', 'e']
+2 tempk[m] : de
+tempk[m] : 222
+1 tempk[m] : ['c', 'a']
+2 tempk[m] : ca
+tempk[m] : 202
+1 tempk[m] : ['0', '9']
+2 tempk[m] : 09
+tempk[m] : 9
+1 tempk[m] : ['c', 'e']
+2 tempk[m] : ce
+tempk[m] : 206
+1 tempk[m] : ['b', 'a']
+2 tempk[m] : ba
+tempk[m] : 186
+1 tempk[m] : ['7', '8']
+2 tempk[m] : 78
+tempk[m] : 120
+1 tempk[m] : ['c', '0']
+2 tempk[m] : c0
+tempk[m] : 192
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+153 tempk : [152, 222, 202, 9, 206, 186, 120, 192, 0, 0, 0, 0, 0, 0, 0, 0]
+res 1: 135, 190, 0, 199, 134, 194, 59, 203, 162, 115, 8, 22, 237, 185, 94, 98
+res 2: ['135', ' 190', ' 0', ' 199', ' 134', ' 194', ' 59', ' 203', ' 162', ' 115', ' 8', ' 22', ' 237', ' 185', ' 94', ' 98']
+res 3: ['0x87', '0xbe', '0x0', '0xc7', '0x86', '0xc2', '0x3b', '0xcb', '0xa2', '0x73', '0x8', '0x16', '0xed', '0xb9', '0x5e', '0x62']
+(res[0])[2:] : 87
+res[0] : 87
+res 4: ['87', 'be', '00', 'c7', '86', 'c2', '3b', 'cb', 'a2', '73', '08', '16', 'ed', 'b9', '5e', '62']
+type(res) : <class 'list'>
+temp : 87be00c786c23bcba2730816edb95e62
+i : 5
+dived_s[i] : 87be00c786c23bcba2730816edb95e62
+exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '6768647770616b73', 'ed998deca09ceba78c']
+dived_s[i] : 87be00c786c23bcba2730816edb95e62
+len(dived_s[i]) : 32
+len(dived_s[i])%32 : 0
+1 dived_s[i] : 6768647770616b73
+1 len(dived_s[i]) : 16
+1 BLOCK_SIZE * 2 : 32
+1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) : 16
+2 dived_s[i] : [['6', '7', '6', '8', '6', '4', '7', '7', '7', '0', '6', '1', '6', 'b', '7', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+2 len(dived_s[i]) : 1
+143 temp : [['6', '7', '6', '8', '6', '4', '7', '7', '7', '0', '6', '1', '6', 'b', '7', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+145 tempk : [['6', '7'], ['6', '8'], ['6', '4'], ['7', '7'], ['7', '0'], ['6', '1'], ['6', 'b'], ['7', '3'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0']]
+1 tempk[m] : ['6', '7']
+2 tempk[m] : 67
+tempk[m] : 103
+1 tempk[m] : ['6', '8']
+2 tempk[m] : 68
+tempk[m] : 104
+1 tempk[m] : ['6', '4']
+2 tempk[m] : 64
+tempk[m] : 100
+1 tempk[m] : ['7', '7']
+2 tempk[m] : 77
+tempk[m] : 119
+1 tempk[m] : ['7', '0']
+2 tempk[m] : 70
+tempk[m] : 112
+1 tempk[m] : ['6', '1']
+2 tempk[m] : 61
+tempk[m] : 97
+1 tempk[m] : ['6', 'b']
+2 tempk[m] : 6b
+tempk[m] : 107
+1 tempk[m] : ['7', '3']
+2 tempk[m] : 73
+tempk[m] : 115
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+153 tempk : [103, 104, 100, 119, 112, 97, 107, 115, 0, 0, 0, 0, 0, 0, 0, 0]
+res 1: 122, 44, 114, 190, 134, 193, 149, 18, 153, 227, 215, 196, 81, 233, 202, 40
+res 2: ['122', ' 44', ' 114', ' 190', ' 134', ' 193', ' 149', ' 18', ' 153', ' 227', ' 215', ' 196', ' 81', ' 233', ' 202', ' 40']
+res 3: ['0x7a', '0x2c', '0x72', '0xbe', '0x86', '0xc1', '0x95', '0x12', '0x99', '0xe3', '0xd7', '0xc4', '0x51', '0xe9', '0xca', '0x28']
+(res[0])[2:] : 7a
+res[0] : 7a
+res 4: ['7a', '2c', '72', 'be', '86', 'c1', '95', '12', '99', 'e3', 'd7', 'c4', '51', 'e9', 'ca', '28']
+type(res) : <class 'list'>
+temp : 7a2c72be86c1951299e3d7c451e9ca28
+i : 6
+dived_s[i] : 7a2c72be86c1951299e3d7c451e9ca28
+exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', 'ed998deca09ceba78c']
+dived_s[i] : 7a2c72be86c1951299e3d7c451e9ca28
+len(dived_s[i]) : 32
+len(dived_s[i])%32 : 0
+1 dived_s[i] : ed998deca09ceba78c
+1 len(dived_s[i]) : 18
+1 BLOCK_SIZE * 2 : 32
+1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) : 14
+2 dived_s[i] : [['e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+2 len(dived_s[i]) : 1
+143 temp : [['e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '7', '8', 'c', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+145 tempk : [['e', 'd'], ['9', '9'], ['8', 'd'], ['e', 'c'], ['a', '0'], ['9', 'c'], ['e', 'b'], ['a', '7'], ['8', 'c'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0'], ['0', '0']]
+1 tempk[m] : ['e', 'd']
+2 tempk[m] : ed
+tempk[m] : 237
+1 tempk[m] : ['9', '9']
+2 tempk[m] : 99
+tempk[m] : 153
+1 tempk[m] : ['8', 'd']
+2 tempk[m] : 8d
+tempk[m] : 141
+1 tempk[m] : ['e', 'c']
+2 tempk[m] : ec
+tempk[m] : 236
+1 tempk[m] : ['a', '0']
+2 tempk[m] : a0
+tempk[m] : 160
+1 tempk[m] : ['9', 'c']
+2 tempk[m] : 9c
+tempk[m] : 156
+1 tempk[m] : ['e', 'b']
+2 tempk[m] : eb
+tempk[m] : 235
+1 tempk[m] : ['a', '7']
+2 tempk[m] : a7
+tempk[m] : 167
+1 tempk[m] : ['8', 'c']
+2 tempk[m] : 8c
+tempk[m] : 140
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+1 tempk[m] : ['0', '0']
+2 tempk[m] : 00
+tempk[m] : 0
+153 tempk : [237, 153, 141, 236, 160, 156, 235, 167, 140, 0, 0, 0, 0, 0, 0, 0]
+res 1: 54, 107, 73, 242, 238, 63, 34, 251, 6, 52, 101, 216, 182, 186, 239, 60
+res 2: ['54', ' 107', ' 73', ' 242', ' 238', ' 63', ' 34', ' 251', ' 6', ' 52', ' 101', ' 216', ' 182', ' 186', ' 239', ' 60']
+res 3: ['0x36', '0x6b', '0x49', '0xf2', '0xee', '0x3f', '0x22', '0xfb', '0x6', '0x34', '0x65', '0xd8', '0xb6', '0xba', '0xef', '0x3c']
+(res[0])[2:] : 36
+res[0] : 36
+res 4: ['36', '6b', '49', 'f2', 'ee', '3f', '22', 'fb', '06', '34', '65', 'd8', 'b6', 'ba', 'ef', '3c']
+type(res) : <class 'list'>
+temp : 366b49f2ee3f22fb063465d8b6baef3c
+i : 7
+dived_s[i] : 366b49f2ee3f22fb063465d8b6baef3c
+exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+dived_s[i] : 366b49f2ee3f22fb063465d8b6baef3c
+len(dived_s[i]) : 32
+len(dived_s[i])%32 : 0
+dived_s 259 : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+
+
+
+
+257 i : 2
+extend_loc[i] : 4
+temp : d82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', 'd82c84bbd9b7f4938daff2cebafcc213_898d5f9c69e314935864046ca36137b4', '898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+257 i : 1
+extend_loc[i] : 3
+temp : 6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', '6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+final exited
+dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', '6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+alpha[ 0 ] : g
+alpha[ 1 ] : n
+alpha[ 2 ] : k
+alpha[ 3 ] : g
+alpha[ 4 ] : k
+====================
+281 dived_s : ['gd1c61a2f633708a7f802914917e62833', 'n6df2938405ff970dad859019c4552602', 'k6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'gd82c84bbd9b7f4938daff2cebafcc213', 'k898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
+====================
+res : gd1c61a2f633708a7f802914917e62833.n6df2938405ff970dad859019c4552602.k6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213.gd82c84bbd9b7f4938daff2cebafcc213.366b49f2ee3f22fb063465d8b6baef3c
+alpha : ['g', 'n', 'k', 'g', 'k']
+
+C:\workspace\dc\dev_util>
