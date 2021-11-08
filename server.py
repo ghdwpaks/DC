@@ -1,6 +1,6 @@
 import socket
 
-ser_HOST = '127.0.0.1'
+ser_HOST = '172.30.1.46'
 ser_PORT = 9999
 
 print("ser")
@@ -18,4 +18,6 @@ while True:
     recvData = conn.recv(1024)
     print(recvData.decode('utf-8'))
     sendData = input("보내기 > ")
+    if sendData == "" or sendData == None :
+        sendData = " "
     conn.send(sendData.encode('utf-8'))
