@@ -1,6 +1,6 @@
 
 import copy
-s = "ghdwpaks 홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만"
+s = "ghdwpaks 123 홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만"
 
 def list_chunk(lst, n):
         return [lst[i:i+n] for i in range(0, len(lst), n)]
@@ -72,8 +72,14 @@ s = list(s)
 temp = [s[0]]
 
 def return_isalph(w) :
-    if w.encode().isalpha(): return True
-    else: return False
+    if w.isdigit() :
+        return "n"
+    else :
+        if w.encode().isalpha():
+            return "g"
+        else: 
+            return "k"
+
 
 def FillUp0(i,byte=4) :
     #i = 10
@@ -85,16 +91,16 @@ def FillUp0(i,byte=4) :
             break
     return "".join(i)
     
-
+print("88 s :",s)
 for i in range(1,len(s)) :
     iisalpha = return_isalph(s[i])
     tisalpha = return_isalph("".join(temp))
     #print("s[i] :",s[i])
-    #print("iisalpha :",iisalpha)
+    print("iisalpha :",iisalpha)
 
     #print("''.join(temp) :","".join(temp))
-    #print("tisalpha :",tisalpha)
-    #print("iisalpha == tisalpha  :",iisalpha == tisalpha )
+    print("tisalpha :",tisalpha)
+    print("iisalpha == tisalpha  :",iisalpha == tisalpha )
     if iisalpha == tisalpha :
         temp.append(s[i])
         if i == len(s)-1 : dived_s.append("".join(temp))
@@ -102,10 +108,10 @@ for i in range(1,len(s)) :
         dived_s.append("".join(temp))
         temp = [s[i]]
     #print("\n\n\n")
-#print("1 dived_s :",dived_s)
+print("1 dived_s :",dived_s)
 alpha = []
 for i in range(len(dived_s)) :
-    if return_isalph(dived_s[i]) :
+    if 'g' == return_isalph(dived_s[i]):
         temp = []
         for j in range(len(dived_s[i])) :
             #print("hex(ord(dived_s[i][j])) :",hex(ord(dived_s[i][j])))
@@ -116,9 +122,23 @@ for i in range(len(dived_s)) :
         temp_res.insert(0,"g")
         temp_res = "".join(temp_res)
         '''
-        alpha.append(True)
+        alpha.append('g')
         dived_s[i] = (temp_res)
-    else :
+
+    elif 'n' == return_isalph(dived_s[i]) :
+        temp = []
+        for j in range(len(dived_s[i])) :
+            #print("hex(ord(dived_s[i][j])) :",hex(ord(dived_s[i][j])))
+            temp.append(str(hex(ord(dived_s[i][j])))[2:])
+        temp_res = "".join(temp)
+        '''
+        temp_res = list(temp_res)
+        temp_res.insert(0,"g")
+        temp_res = "".join(temp_res)
+        '''
+        alpha.append('n')
+        dived_s[i] = (temp_res)
+    elif 'k' == return_isalph(dived_s[i]) :
         temp = []
         for j in range(len(dived_s[i])) :
             #dived_s[i] = dived_s[i].encode("utf-8")
@@ -138,7 +158,7 @@ for i in range(len(dived_s)) :
         temp_res.insert(0,"k")
         temp_res = "".join(temp_res)
         '''
-        alpha.append(False)
+        alpha.append('k')
         dived_s[i] = (temp_res)
 print("143 dived_s :",dived_s)
 '''
@@ -243,10 +263,8 @@ print("final exited")
 print("dived_s :",dived_s)
 for i in range(len(alpha)) :
     dived_s[i] = list(dived_s[i])
-    if alpha[i] :
-        dived_s[i].insert(0,"g")
-    else :
-        dived_s[i].insert(0,"k")
+    print("alpha[",i,"] :",alpha[i])
+    dived_s[i].insert(0,alpha[i])
     dived_s[i] = "".join(dived_s[i])
         
 print("dived_s 259 :",dived_s)
@@ -268,7 +286,7 @@ for i in range(len(blank_loc)) :
         res += "."  
 res += dived_s[-1]
 print("res :",res)
-print(alpha)
+print("alpha :",alpha)
 
 '''
 res : g6768647770616b73....ked998deca09ceba78c.g6768647770616b73.ked998deca09ceba78c
