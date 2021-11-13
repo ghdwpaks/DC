@@ -22,6 +22,16 @@ aes256 실적용이 가능한 코드 포함
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=chandong83&logNo=221021909030
 aes256 실적용이 가능한 코드와 상세한 설명 포함
 
+https://inspireman.tistory.com/16
+파이썬 창 띄우기에 대한 임배디드 코드와 간략한 설명 포함
+
+https://code.tutsplus.com/ko/tutorials/compressing-and-extracting-files-in-python--cms-26816
+파이썬 압축에 대한 여러 코드와 상세한 설명 포함. 압축 풀기에 대한 코드 및 설명 부재
+
+https://yganalyst.github.io/data_handling/memo_2/
+파이썬 압축과 압축풀기에 대한 여러 코드와 각각의 간략한 설명 포함.
+
+
 ___________________________________________________________________
 socket 모듈 (https://bnzn2426.tistory.com/53)
 
