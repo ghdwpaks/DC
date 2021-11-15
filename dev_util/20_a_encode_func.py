@@ -102,7 +102,7 @@ def encode(s,key=None) :
             dived_s[i] = (temp_res)
     extend_loc = []
     for i in range(len(dived_s)) :
-        if len(dived_s[i]) > 32 :
+        if len(dived_s[i]) > 31 :
             extend_loc.append(i)
             temp = copy.deepcopy(dived_s[i])
             temp = list(temp)
