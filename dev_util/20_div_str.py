@@ -55,17 +55,20 @@ while True :
     43 real_name : HCB8KMM
 
     '''
-
-    real_name = (str(socket.gethostname()).split("-"))[1]
-    real_name_multiply = (32 // len(real_name))+1
-    real_name = (real_name * real_name_multiply)[:32]
-    real_name = list(real_name)
-    for i in range(len(real_name)) :
-        real_name[i] = ord(real_name[i])
-    key = copy.deepcopy(real_name)         
-
-    aes = AESCryptoCBC(bytes(key))
-    #print("aes :",aes)
+    def get_key(s = (str(socket.gethostname()).split("-"))[1]) : 
+        
+        #real_name : HCB8KMM
+        real_name_multiply = (32 // len(s))+1
+        real_name = (s * real_name_multiply)[:32]
+        real_name = list(real_name)
+        for i in range(len(real_name)) :
+            real_name[i] = ord(real_name[i])
+        key = copy.deepcopy(real_name)         
+        print("key :",key)
+        aes = AESCryptoCBC(bytes(key))
+        return aes
+        #print("aes :",aes)
+    aes = get_key()
 
     '''
     이 아래에서는 평문을 나누고
