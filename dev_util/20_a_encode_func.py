@@ -90,13 +90,7 @@ def encode(s,key=None) :
         elif 'k' == return_isalph(dived_s[i]) :
             temp = []
             for j in range(len(dived_s[i])) :
-                string = str(str(dived_s[i][j]).encode("utf-8"))
-                ##print(string)
-
-                characters = "\\x'"
-                for x in range(len(characters)):
-                    string = (string.replace(characters[x],""))
-                temp.append(string[1:])
+                temp.append(hex(ord(dived_s[i][j]))[2:])
             temp_res = "".join(temp)
             alpha.append('k')
             dived_s[i] = (temp_res)

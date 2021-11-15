@@ -67,8 +67,8 @@ while True :
         print("key :",key)
         aes = AESCryptoCBC(bytes(key))
         return aes
-        #print("aes :",aes)
-    aes = get_key()
+        print("aes :",aes)
+    aes = get_key()      
 
     '''
     이 아래에서는 평문을 나누고
@@ -91,12 +91,12 @@ while True :
     space_bar_loc = []
     scount = s.count(" ")
     for i in range(scount) :
-        #print("i :",i)
-        #print("s :",s)
+        print("i :",i)
+        print("s :",s)
         space_bar_loc.append(s.find(" "))
         s = "".join([s[:s.find(" ")],s[s.find(" ")+1:]])
-    #print("s :",s)
-    #print("space_bar_loc :",space_bar_loc)
+    print("s :",s)
+    print("space_bar_loc :",space_bar_loc)
     space_bar_loc_set = set(space_bar_loc)
     space_bar_loc_set = list(space_bar_loc_set)
     blank_loc = []
@@ -104,7 +104,7 @@ while True :
         blank_loc.append(0)
         blank_loc[i] += space_bar_loc.count(space_bar_loc_set[i])
 
-    #print("blank_loc :",blank_loc)
+    print("blank_loc :",blank_loc)
 
     dived_s = []
     s = list(s)
@@ -158,24 +158,24 @@ while True :
                 break
         return "".join(i)
         
-    #print("88 s :",s)
+    print("88 s :",s)
     for i in range(1,len(s)) :
         iisalpha = return_isalph(s[i])
         tisalpha = return_isalph("".join(temp))
-        ##print("s[i] :",s[i])
-        #print("iisalpha :",iisalpha)
+        #print("s[i] :",s[i])
+        print("iisalpha :",iisalpha)
 
-        ##print("''.join(temp) :","".join(temp))
-        #print("tisalpha :",tisalpha)
-        #print("iisalpha == tisalpha  :",iisalpha == tisalpha )
+        #print("''.join(temp) :","".join(temp))
+        print("tisalpha :",tisalpha)
+        print("iisalpha == tisalpha  :",iisalpha == tisalpha )
         if iisalpha == tisalpha :
             temp.append(s[i])
             if i == len(s)-1 : dived_s.append("".join(temp))
         else :
             dived_s.append("".join(temp))
             temp = [s[i]]
-        ##print("\n\n\n")
-    #print("1 dived_s :",dived_s)
+        #print("\n\n\n")
+    print("1 dived_s :",dived_s)
 
     '''
     이 시점에서의 'dived_s' 변수의 예시는 다음과 같다.
@@ -187,7 +187,7 @@ while True :
         if 'g' == return_isalph(dived_s[i]):
             temp = []
             for j in range(len(dived_s[i])) :
-                ##print("hex(ord(dived_s[i][j])) :",hex(ord(dived_s[i][j])))
+                #print("hex(ord(dived_s[i][j])) :",hex(ord(dived_s[i][j])))
                 temp.append(str(hex(ord(dived_s[i][j])))[2:])
             temp_res = "".join(temp)
             '''
@@ -201,7 +201,7 @@ while True :
         elif 'n' == return_isalph(dived_s[i]) :
             temp = []
             for j in range(len(dived_s[i])) :
-                ##print("hex(ord(dived_s[i][j])) :",hex(ord(dived_s[i][j])))
+                #print("hex(ord(dived_s[i][j])) :",hex(ord(dived_s[i][j])))
                 temp.append(str(hex(ord(dived_s[i][j])))[2:])
             temp_res = "".join(temp)
             '''
@@ -214,17 +214,33 @@ while True :
         elif 'k' == return_isalph(dived_s[i]) :
             temp = []
             for j in range(len(dived_s[i])) :
+                c = dived_s[i][j]
+                #c : "만"
+                od = hex(ord(c))[2:]
+                #od : b64d
+                temp.append(od)
+                #appending : b64d
+                '''
                 #dived_s[i] = dived_s[i].encode("utf-8")
                 #(str(dived_s[i][j]).encode("utf-8"))
-                string = str(str(dived_s[i][j]).encode("utf-8"))
-                ##print(string)
+                print("219 dived_s[i] :",dived_s[i])
+                #219 dived_s[i] : 홍제만
+                print("220 dived_s[i][j] : ",dived_s[i][j])
+                #220 dived_s[i][j] :  만
 
+                string = str(str(dived_s[i][j]).encode("utf-8"))
+                print("1 string :",string)
+                #string : b'\xeb\xa7\x8c'
                 characters = "\\x'"
-                ##print(characters)
+                #print(characters)
                 for x in range(len(characters)):
                     string = (string.replace(characters[x],""))
+                print("2 string :",string)
+                #2 string : beba78c
                 temp.append(string[1:])
-                ##print("temp :",temp)
+                #appending : eba78c
+                #print("temp :",temp)
+                '''
             temp_res = "".join(temp)
             '''
             temp_res = list(temp_res)
@@ -233,7 +249,7 @@ while True :
             '''
             alpha.append('k')
             dived_s[i] = (temp_res)
-    #print("143 dived_s :",dived_s)
+    print("143 dived_s :",dived_s)
     '''
     143 dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78ced998deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
     '''
@@ -253,81 +269,81 @@ while True :
             temp = [temp[:31],temp[31:]]
             for j in range(len(temp)) :
                 temp[j] = "".join(temp[j])
-            #print("temp 154 :",temp)
+            print("temp 154 :",temp)
             del dived_s[i]
             for j in range(len(temp)) :
                 dived_s.insert(i+j,temp[j])
-            #print("temp :",temp)
-            #print("dived_s :",dived_s)
-    #print("154 2 dived_s :",dived_s)
-    #print("154 2 extend_loc :",extend_loc)
+            print("temp :",temp)
+            print("dived_s :",dived_s)
+    print("154 2 dived_s :",dived_s)
+    print("154 2 extend_loc :",extend_loc)
     '''
     154 2 dived_s : ['6768647770616b73', '313233', 'ed998deca09ceba78ced998deca09ce', 'ba78ced998deca09ceba78ced998dec', 'a09ceba78ced998deca09ceba78ced9', '98deca09ceba78c', '6768647770616b73', 'ed998deca09ceba78c']
     154 2 extend_loc : [2, 3, 4]
     '''
     for i in range(len(dived_s)) :
-        ##print("len(dived_s[",i,"]) :",len(dived_s[i]))
-        ##print("1 dived_s[{}] : {}".format(i,dived_s[i]))
-        #print("1 dived_s[i] :",dived_s[i])
-        #print("1 len(dived_s[i]) :",len(dived_s[i]))
-        #print("1 BLOCK_SIZE * 2 :",BLOCK_SIZE*2)
-        #print("1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) :",((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))))
+        #print("len(dived_s[",i,"]) :",len(dived_s[i]))
+        #print("1 dived_s[{}] : {}".format(i,dived_s[i]))
+        print("1 dived_s[i] :",dived_s[i])
+        print("1 len(dived_s[i]) :",len(dived_s[i]))
+        print("1 BLOCK_SIZE * 2 :",BLOCK_SIZE*2)
+        print("1 ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))) :",((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2))))
         dived_s[i] =dived_s[i] + ((BLOCK_SIZE*2)-(len(dived_s[i]) % (BLOCK_SIZE*2)))*"0"
-        ##print("2 dived_s[{}] : {}".format(i,dived_s[i]))
+        #print("2 dived_s[{}] : {}".format(i,dived_s[i]))
         dived_s[i] = list_chunk(list(dived_s[i]),BLOCK_SIZE*2)
         #dived_s[i] = ["0ed998deca09ceba0ed998deca09ceba","78c0ed998deca09c78c0ed998deca09c"]
-        #print("2 dived_s[i] :",dived_s[i])
-        #print("2 len(dived_s[i]) :",len(dived_s[i]))
+        print("2 dived_s[i] :",dived_s[i])
+        print("2 len(dived_s[i]) :",len(dived_s[i]))
         temp = dived_s[i]
         #temp = "0ed998deca09ceba0ed998deca09ceba"
 
         for k in range(len(temp)) :
             temp = list(temp)
-            #print("143 temp :",temp)
+            print("143 temp :",temp)
             #temp = ['0', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a', '0', 'e', 'd', '9', '9', '8', 'd', 'e', 'c', 'a', '0', '9', 'c', 'e', 'b', 'a']
             tempk = list_chunk(temp[k],2)
             #tempk = [['0', 'e'], ['d', '9'], ['9', '8'], ['d', 'e'], ['c', 'a'], ['0', '9'], ['c', 'e'], ['b', 'a'], ['0', 'e'], ['d', '9'], ['9', '8'], ['d', 'e'], ['c', 'a'], ['0', '9'], ['c', 'e'], ['b', 'a']]
-            #print("145 tempk :",tempk)
+            print("145 tempk :",tempk)
             for m in range(len(tempk)) :
-                #print("1 tempk[m] :",tempk[m])
+                print("1 tempk[m] :",tempk[m])
                 tempk[m] = "".join(tempk[m])
-                #print("2 tempk[m] :",tempk[m])
+                print("2 tempk[m] :",tempk[m])
                 tempk[m] = int(("0x"+tempk[m]),16)
-                #print("tempk[m] :",tempk[m])
+                print("tempk[m] :",tempk[m])
             #tempk =  [14, 217, 152, 222, 202, 9, 206, 186, 14, 217, 152, 222, 202, 9, 206, 186]
-            #print("153 tempk :",tempk)
+            print("153 tempk :",tempk)
             enc = list(aes.encrypt(bytes(tempk)))
             
             res = copy.deepcopy(str(enc))
             #res : [200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75]
             res = res[1:-1]
             #res : 200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75
-            #print("res 1:",res)
+            print("res 1:",res)
             res = res.split(",")
             #res 2: ['200', ' 182', ' 117', ' 166', ' 2', ' 34', ' 203', ' 255', ' 222', ' 183', ' 47', ' 150', ' 232', ' 132', ' 245', ' 75']
-            #print("res 2:",res)
+            print("res 2:",res)
             for o in range(len(res)) :
                 res[o] = str(hex(int(res[o].strip())))
-            #print("res 3:",res)
-            #print("(res[0])[2:] :",(res[0])[2:])
+            print("res 3:",res)
+            print("(res[0])[2:] :",(res[0])[2:])
             res[0] = (res[0])[2:]
-            #print("res[0] :",res[0])
+            print("res[0] :",res[0])
             for p in range(1,len(res)) :
                 res[p] = (res[p])[2:]
                 res[p] = FillUp0(res[p],2)
-            #print("res 4:",res)
-            ##print("res 3:",res)
-            #print("type(res) :",type(res))
+            print("res 4:",res)
+            #print("res 3:",res)
+            print("type(res) :",type(res))
             temp = "".join(res)
-            #print("temp :",temp)
+            print("temp :",temp)
             dived_s[i] = temp
-            #print("i :",i)
-            #print("dived_s[i] :",dived_s[i])
-        #print("exited")
-        #print("dived_s :",dived_s)
-        #print("dived_s[i] :",dived_s[i])
-        #print("len(dived_s[i]) :",len(dived_s[i]))
-        #print("len(dived_s[i])%32 :",len(dived_s[i])%(BLOCK_SIZE*2))
+            print("i :",i)
+            print("dived_s[i] :",dived_s[i])
+        print("exited")
+        print("dived_s :",dived_s)
+        print("dived_s[i] :",dived_s[i])
+        print("len(dived_s[i]) :",len(dived_s[i]))
+        print("len(dived_s[i])%32 :",len(dived_s[i])%(BLOCK_SIZE*2))
         '''
         exited
         dived_s : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
@@ -350,8 +366,8 @@ while True :
         '''
 
             
-    #print("dived_s 259 :",dived_s)
-    #print("extend_loc :",extend_loc) 
+    print("dived_s 259 :",dived_s)
+    print("extend_loc :",extend_loc) 
     '''
     dived_s 259 : ['d1c61a2f633708a7f802914917e62833', '6df2938405ff970dad859019c4552602', 'd82c84bbd9b7f4938daff2cebafcc213', '898d5f9c69e314935864046ca36137b4', '6ec4673d5c8e55d78b629190e90bb7f7', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
     extend_loc : [2, 3, 4]
@@ -361,32 +377,32 @@ while True :
     The paragraph right below, where the extended_loc variable is used, is where each part that has been expanded connects to the underbar again.
 
     '''
-    #print("\n\n\n")
+    print("\n\n\n")
     for i in range(len(extend_loc)) :
-        #print("257 i :",i)
-        #print("extend_loc[i] :",extend_loc[i])
+        print("257 i :",i)
+        print("extend_loc[i] :",extend_loc[i])
         temp = '_'.join([dived_s[extend_loc[i]-i],dived_s[(extend_loc[i]+1)-i]])
         del dived_s[extend_loc[i]-i]
         del dived_s[extend_loc[i]-i]
         dived_s.insert(extend_loc[i]-i,temp)
-        #print("temp :",temp)
+        print("temp :",temp)
         
-        #print("dived_s :",dived_s)
+        print("dived_s :",dived_s)
     '''
     dived_s와 alpha가 활용되는 이 바로 아래의 문단은 각각의 단어들의 인코딩 또는 디코딩 형식을 지정해주고, 마지막으로 상대에게 보낼 문장 부분을 포장하는 곳이다.
 
     The paragraph right below, where divided_s and alpha are utilized, specifies the encoding or decoding format of each word and finally packs the sentence portion to be sent to the other person.
     '''
-    #print("final exited")
-    #print("dived_s :",dived_s)
+    print("final exited")
+    print("dived_s :",dived_s)
     for i in range(len(alpha)) :
         dived_s[i] = list(dived_s[i])
-        #print("alpha[",i,"] :",alpha[i])
+        print("alpha[",i,"] :",alpha[i])
         dived_s[i].insert(0,alpha[i])
         dived_s[i] = "".join(dived_s[i])
-    #print("="*20)
-    #print("281 dived_s :",dived_s)
-    #print("="*20)
+    print("="*20)
+    print("281 dived_s :",dived_s)
+    print("="*20)
     res = ""
     for i in range(len(blank_loc)) :
         res += dived_s[i]
@@ -394,7 +410,7 @@ while True :
             res += "."  
     res += dived_s[-1]
     print(res)
-    #print("alpha :",alpha)
+    print("alpha :",alpha)
     #s = "ghdwpaks 123 홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만"
     '''
     281 dived_s : ['gd1c61a2f633708a7f802914917e62833', 'n6df2938405ff970dad859019c4552602', 'k6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'gd82c84bbd9b7f4938daff2cebafcc213', 'k898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']
