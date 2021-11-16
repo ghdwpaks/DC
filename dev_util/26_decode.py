@@ -169,17 +169,18 @@ for i in range(len(div_s)) :
     print("5 div_s[i] :",div_s[i])
     print("5 len(div_s[i]) :",len(div_s[i]))
     temp = list_chunk(list(div_s[i]),2)
-    print("5 temp :",temp)
+    print("5 1 temp :",temp)
     #1 temp : [['3', '8'], ['7', '2'], ['e', '8'], ['5', '3'], ['d', 'b'], ['1', 'c'], ['3', 'b'], ['a', 'e'], ['4', '6'], ['7', '5'], ['a', '4'], ['1', 'd'], ['c', '6'], ['5', 'd'], ['9', '6'], ['c', '4']]
     for j in range(len(temp)) :
         temp[j] = "".join(temp[j])
-    print("5 temp :",temp)
+    print("5 2 temp :",temp)
     #2 temp : ['38', '72', 'e8', '53', 'db', '1c', '3b', 'ae', '46', '75', 'a4', '1d', 'c6', '5d', '96', 'c4']
     temp_res = []
     dec = list()
     for j in range(len(temp)) :
         temp[j] = int("0x"+temp[j],16)
         print("5 temp[",j,"] :",temp[j])
+    print("5 3 temp :",temp)
     dec = list(aes.decrypt(bytes(temp)))
     print("5 dec :",dec)
     div_s[i] = dec

@@ -218,6 +218,7 @@ while True :
                 #c : "만"
                 od = hex(ord(c))[2:]
                 #od : b64d
+                print("od :",od)
                 temp.append(od)
                 #appending : b64d
                 '''
