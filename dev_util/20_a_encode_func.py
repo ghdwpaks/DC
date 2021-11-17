@@ -90,7 +90,10 @@ def encode(s,key=None) :
         elif 'k' == return_isalph(dived_s[i]) :
             temp = []
             for j in range(len(dived_s[i])) :
-                temp.append(hex(ord(dived_s[i][j]))[2:])
+                c = dived_s[i][j]
+                od = hex(ord(c))[2:]
+                print("od :",od)
+                temp.append(od)
             temp_res = "".join(temp)
             alpha.append('k')
             dived_s[i] = (temp_res)
