@@ -1,9 +1,22 @@
 import copy as c
 from Cryptodome.Cipher import AES 
 import socket
+dec_count = 0
+
 #input_str = 'gd1c61a2f633708a7f802914917e62833.ke48319fc5fc49a26c3f03b15bc9fed26.n85f848fc121e51b5bbcf3fee8036f8da.g334f1100efa7821771efd28739c2c261'
 
-input_str ='g96e5cb30a9326688c33765c4f1f1a227_6894e7a45b772a127a01968852515d4f.kfa8cc9b3d1135c772faf7149ac5182f4.n292f030d257e2680a7526ca575b201b4'
+input_str ='g96e5cb30a9326688c33765c4f1f1a227_6894e7a45b772a127a01968852515d4f.kfa8cc9b3d1135c772faf7149ac5182f4.n9ab63b459754b3a8c4a34e0a9e722481'
+#ghdwpaksghdwpaks 홍제만 123
+
+input_str = "gd1c61a2f633708a7f802914917e62833"
+#ghdwpaks
+
+input_str = "kdd352eceb4a6f27915337094e5c74eb1"
+#홍제만
+
+input_str = "g96e5cb30a9326688c33765c4f1f1a2276894e7a45b772a127a01968852515d4f"
+#ghdwpaksghdwpaks
+
 
 print("\n\n\n.1.\n\n\n")
 
@@ -176,16 +189,30 @@ for i in range(len(div_s)) :
     print("5 2 temp :",temp)
     #2 temp : ['38', '72', 'e8', '53', 'db', '1c', '3b', 'ae', '46', '75', 'a4', '1d', 'c6', '5d', '96', 'c4']
     temp_res = []
-    dec = list()
+    dec = []
     for j in range(len(temp)) :
         temp[j] = int("0x"+temp[j],16)
         print("5 temp[",j,"] :",temp[j])
     print("5 3 temp :",temp)
-    dec = list(aes.decrypt(bytes(temp)))
+    #5 3 temp : [221, 53, 46, 206, 180, 166, 242, 121, 21, 51, 112, 148, 229, 199, 78, 177]
+    temp = list_chunk(temp , 16)
+    print("5 4 temp :",temp)
+    dec_temp = []
+    for j in range(len(temp)) :
+        print("j :",j)
+        print("temp[j] :",temp[j])
+        aes_dec = list(aes.decrypt(bytes(temp[j])))
+        temp_dec = c.deepcopy(aes_dec)
+        dec_count += 1
+        print("temp_dec :",temp_dec)
+        dec_temp.extend(temp_dec)
+        print("dec_temp :",dec_temp)
+    dec.extend(dec_temp)
     print("5 dec :",dec)
     div_s[i] = dec
     print("\n\n\n")
 print("5 div_s :",div_s)
+print("5 dec_count :",dec_count)
 '''
 5 div_s : [[166, 229, 203, 48, 169, 50, 102, 136, 195, 55, 101, 196, 241, 241, 162, 39, 15, 252, 131, 211, 43, 22, 65, 97, 29, 105, 242, 255, 34, 48, 54, 63], [40, 60, 228, 136, 75, 137, 76, 154, 185, 54, 243, 76, 163, 160, 255, 104], [48, 48, 50, 51, 49, 48, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 '''

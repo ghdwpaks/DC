@@ -2,6 +2,7 @@
 import copy
 from Cryptodome.Cipher import AES 
 import socket
+enc_count = 0
 while True :
     '''
     s = "ghdwpaks 123     홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만"
@@ -314,7 +315,7 @@ while True :
             #tempk =  [14, 217, 152, 222, 202, 9, 206, 186, 14, 217, 152, 222, 202, 9, 206, 186]
             print("153 tempk :",tempk)
             enc = list(aes.encrypt(bytes(tempk)))
-            
+            enc_count += 1
             res = copy.deepcopy(str(enc))
             #res : [200,182,117,166,2,34,203,255,222,183,47,150,232,132,245,75]
             res = res[1:-1]
@@ -382,7 +383,7 @@ while True :
     for i in range(len(extend_loc)) :
         print("257 i :",i)
         print("extend_loc[i] :",extend_loc[i])
-        temp = '_'.join([dived_s[extend_loc[i]-i],dived_s[(extend_loc[i]+1)-i]])
+        temp = ''.join([dived_s[extend_loc[i]-i],dived_s[(extend_loc[i]+1)-i]])
         del dived_s[extend_loc[i]-i]
         del dived_s[extend_loc[i]-i]
         dived_s.insert(extend_loc[i]-i,temp)
@@ -412,6 +413,7 @@ while True :
     res += dived_s[-1]
     print(res)
     print("alpha :",alpha)
+    print("enc_count :",enc_count)
     #s = "ghdwpaks 123 홍제만홍제만홍제만홍제만홍제만홍제만 ghdwpaks 홍제만"
     '''
     281 dived_s : ['gd1c61a2f633708a7f802914917e62833', 'n6df2938405ff970dad859019c4552602', 'k6df2938405ff970dad859019c4552602_d82c84bbd9b7f4938daff2cebafcc213', 'gd82c84bbd9b7f4938daff2cebafcc213', 'k898d5f9c69e314935864046ca36137b4', '87be00c786c23bcba2730816edb95e62', '7a2c72be86c1951299e3d7c451e9ca28', '366b49f2ee3f22fb063465d8b6baef3c']

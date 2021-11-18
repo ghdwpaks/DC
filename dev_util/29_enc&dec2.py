@@ -56,47 +56,55 @@ print(al2)
 
 print("\n\n\n")
 
-s = "홍제만"
-s = list(s)
-div_s = []
-for i in range(len(s)) :
-    cc = s[i]
-    od = hex(ord(cc))[2:]
-    print("od :",od)
-    div_s.append(od)
-print("1 div_s :",div_s)
-div_s = list(div_s)
-div_s2 = []
-for i in range(len(div_s)) :
-    temp = list_chunk(list(div_s[i]),2)
-    for j in range(len(temp)) :
-        temp[j] = "".join(temp[j])
-    
-    div_s2.extend(temp)
-div_s = div_s2
-print("2 div_s :",div_s)
-for i in range(len(div_s)) :
-    temp = div_s[i]
-    div_s[i] = int("0x"+temp,16)
-print("3 div_s :",div_s)
-for i in range((16-(len(div_s) % 16))) :
-    div_s.append(0)
-#div_s = div_s + (32-(len(div_s) % 32))*"0"
-print("4 div_s :",div_s)
-aes = get_key()
-res = list(aes.encrypt(bytes(div_s)))
-print("res :",res)
 
-aes = get_key()
-#채택됨
-al1 = list(aes.decrypt(bytes(res)))
-#채택됨
-print("al1 :",al1)
-al11 = list(aes.decrypt(bytes(al1)))
-print("al11 :",al11)
-aes = get_key()
-al2 = list(aes.encrypt(bytes(res)))
-print("al2 :",al2)
+
+while True :
+    aesenc = get_key()
+    aesdec = get_key()
+    print("aesenc :",aesenc)
+    print("aesdec :",aesdec)
+    s = input("입력 : ")
+    s = list(s)
+    div_s = []
+    for i in range(len(s)) :
+        cc = s[i]
+        od = hex(ord(cc))[2:]
+        print("od :",od)
+        div_s.append(od)
+    print("1 div_s :",div_s)
+    div_s = list(div_s)
+    div_s2 = []
+    for i in range(len(div_s)) :
+        temp = list_chunk(list(div_s[i]),2)
+        for j in range(len(temp)) :
+            temp[j] = "".join(temp[j])
+        
+        div_s2.extend(temp)
+    div_s = div_s2
+    print("2 div_s :",div_s)
+    for i in range(len(div_s)) :
+        temp = div_s[i]
+        div_s[i] = int("0x"+temp,16)
+    print("3 div_s :",div_s)
+    for i in range((16-(len(div_s) % 16))) :
+        div_s.append(0)
+    #div_s = div_s + (32-(len(div_s) % 32))*"0"
+    print("4 div_s :",div_s)
+    res = list(aesenc.encrypt(bytes(div_s)))
+    print("res :",res)
+
+    #채택됨
+    al1 = list(aesdec.decrypt(bytes(res)))
+    #채택됨
+    print("al1 :",al1)
+    al11 = list(aesdec.decrypt(bytes(al1)))
+    print("al11 :",al11)
+    al2 = list(aesenc.encrypt(bytes(res)))
+    print("al2 :",al2)
+
+    print("\n\n\n")
+    print(div_s)
+    print(al1)
 
 
 
