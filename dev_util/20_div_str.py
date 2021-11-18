@@ -268,7 +268,10 @@ while True :
             extend_loc.append(i)
             temp = copy.deepcopy(dived_s[i])
             temp = list(temp)
+            print("272 temp :",[temp[:31],temp[31:]])
+            print("273 temp :",list_chunk(temp,32))
             temp = [temp[:31],temp[31:]]
+            
             for j in range(len(temp)) :
                 temp[j] = "".join(temp[j])
             print("temp 154 :",temp)

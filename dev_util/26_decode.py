@@ -11,11 +11,16 @@ input_str ='g96e5cb30a9326688c33765c4f1f1a227_6894e7a45b772a127a01968852515d4f.k
 input_str = "gd1c61a2f633708a7f802914917e62833"
 #ghdwpaks
 
+
 input_str = "kdd352eceb4a6f27915337094e5c74eb1"
 #홍제만
 
 input_str = "g96e5cb30a9326688c33765c4f1f1a2276894e7a45b772a127a01968852515d4f"
 #ghdwpaksghdwpaks
+
+input_str = "g96e5cb30a9326688c33765c4f1f1a2276894e7a45b772a127a01968852515d4f"
+#ghdwpaks
+
 
 
 print("\n\n\n.1.\n\n\n")
@@ -217,14 +222,32 @@ print("5 dec_count :",dec_count)
 5 div_s : [[166, 229, 203, 48, 169, 50, 102, 136, 195, 55, 101, 196, 241, 241, 162, 39, 15, 252, 131, 211, 43, 22, 65, 97, 29, 105, 242, 255, 34, 48, 54, 63], [40, 60, 228, 136, 75, 137, 76, 154, 185, 54, 243, 76, 163, 160, 255, 104], [48, 48, 50, 51, 49, 48, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 '''
 
+
+'''
+아래 6의 영역은 비어있는 영역을 뜻하는 0을 없애고 문자로 변환해주는 과정을 거친다.
+'''
+
 for i in range(len(div_s)) :
+    temp = []
+    div_s[i] = [i for i in div_s[i] if i != 0]
     language = alpha[i]
     if language == "g" or language == "n" :
-        pass
+        temp = c.deepcopy(div_s[i])
+        for j in range(len(temp)) :
+            temp[j] = chr(temp[j])
+        div_s[i] = ("".join(temp))
     elif language == "k" :
         temp = c.deepcopy(div_s[i])
-        print("temp :",temp)
-        
+        for j in range(len(temp)) :
+            temp[j] = hex(temp[j])[2:]
+        temp = list_chunk(temp,2)
+        for j in range(len(temp)) :
+            temp[j] = "".join(temp[j])
+            temp[j] = int(temp[j],16)
+            temp[j] = chr(temp[j])
+        div_s[i] = "".join(temp)
+res = "".join(div_s)
+print("res :",res)
         
 
 
