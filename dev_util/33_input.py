@@ -27,3 +27,4 @@ while True :
             res.append(inputs[stamp:i+1])
     for i in range(len(res)) :
         res[i] = "".join( res[i])
+    print(res)
