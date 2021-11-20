@@ -126,6 +126,52 @@ key = input("키 입력(안할시 기본값) :")
 if key == "" or key == " " :
     key = (str(socket.gethostname()).split("-"))[1]
 
+import socket
+
+ser_HOST = '127.0.0.1'
+ser_PORT = 9999
+
+print("ser")
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind((ser_HOST, ser_PORT))
+
+    s.listen(5)
+    conn, addr = s.accept()
+
+
+conn.sendall("연결됨".encode('utf-8'))
+while True:
+    recvData = conn.recv(1024)
+    print(recvData.decode('utf-8'))
+    sendData = input("보내기 > ")
+    #inputs : "ghdwpaks홍제만ghdwpaks"
+    inputs = list(sendData)
+    res = []
+    stamp = 0
+    for i in range(1,len(inputs)) :
+        if inputs[i-1] == " " and inputs[i] == " " :
+            continue
+        if not return_isalph(inputs[i-1]) == return_isalph(inputs[i]) :
+            res.append(inputs[stamp:i])
+            stamp = copy.deepcopy(i)
+        elif i == len(inputs) -1 :
+            res.append(inputs[stamp:i+1])
+    for i in range(len(res)) :
+        res[i] = "".join( res[i])
+    
+    sending = []
+    for i in range(len(res)) :
+        sending.append(enc(res[i],key))
+    sending = '.'.join(sending)
+    print(sending)
+    conn.send(sending.encode('utf-8'))
+
+
+
+
+'''
 while True :
     #inputs : "ghdwpaks홍제만ghdwpaks"
     inputs = input("입력 : ")
@@ -148,3 +194,4 @@ while True :
         sending.append(enc(res[i],key))
     sending = '.'.join(sending)
     print(sending)
+'''

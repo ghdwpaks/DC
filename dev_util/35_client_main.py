@@ -123,8 +123,38 @@ if key == "" or key == " " :
     key = (str(socket.gethostname()).split("-"))[1]
 
 
+import socket
 
+cli_HOST = '127.0.0.1'
+cli_PORT = 9999
 
+print("cli")
+i = 0
+while True :
+    try :
+
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((cli_HOST, cli_PORT))
+        while True:
+            recvData = s.recv(1024).decode('utf-8')
+            #print(recvData)
+            try :
+                inputing = recvData.split(".")
+
+                res = []
+                for i in range(len(inputing)) :
+                    res.append(dec(inputing[i],key))
+                res = ''.join(res)
+                print(res)
+            except :
+                pass
+            sendData = "ack"
+            s.send(sendData.encode('utf-8'))
+    except :
+        i += 1
+        print(i,"회 시도 실패함.")
+        continue
+'''
 while True :
 
     inputing = "g263cf9989fa35dd411b8214b451b154ea7186829b3643114e90c143b07653ba8.k78af1637caf4c6971a18419e7fb384953880c10f9e9cece42352dbdca1b4f8ac.g83a5492f8c603a64ccaa3efc046bd44fa5f67dfb1081fd0bf7a84bf895bf2f57.k78af1637caf4c6971a18419e7fb384953880c10f9e9cece42352dbdca1b4f8ac.g7369ea85adc0ac3d33b71297f9b26d6c6f4db256bb7934e8b1fd65b12a68451b.k78af1637caf4c6971a18419e7fb384953880c10f9e9cece42352dbdca1b4f8ac"
@@ -135,3 +165,4 @@ while True :
         res.append(dec(inputing[i],key))
     res = ''.join(res)
     print(res)
+'''
