@@ -1,22 +1,8 @@
 
 import copy
-
-
-def return_isalph(w) :
-    #w = "c"
-    if w.isdigit() :
-        return "n"
-    else :
-        if w.encode().isalpha():
-            return "g"
-        else: 
-            return "k"
-
-
-
-import copy
 from Cryptodome.Cipher import AES 
 import socket
+enc_count = 0
 class AESCryptoCBC():
     def __init__(self, key):
         # Initial vector를 0으로 초기화하여 16바이트 할당함
@@ -68,6 +54,57 @@ def FillUp0(i,byte=4) :
 def list_chunk(lst, n):
         return [lst[i:i+n] for i in range(0, len(lst), n)]
 
+def enc(s,key=None) :
+    #ghdwpaksghdaosdunfodsjn
+
+            
+    aes = get_key(key)      
+    
+    dived_s = copy.deepcopy(s)
+    s = list(s)
+    temp = [s[0]]
+    
+    dived_s = list(dived_s)
+    alpha = return_isalph(dived_s[0])
+    temp_res = []
+    for i in range(len(dived_s)) :
+        if 'g' == alpha:
+            dived_s[i] = ord(dived_s[i])
+        elif 'k' == alpha :
+            c = dived_s[i]
+            od = hex(ord(c))[2:]
+            #1 od : d64d
+            od = list(od)
+            od = list_chunk(od,2)
+            for k in range(len(od)) :
+                od[k] = "".join(od[k])
+                od[k] = int("0x"+od[k], 16)
+            temp_res.extend(od)
+    if 'k' == alpha :
+        dived_s = temp_res
+    if len(dived_s) > 31 :
+        temp = copy.deepcopy(dived_s)
+        temp = list(temp)
+        temp = list_chunk(dived_s,32)
+        dived_s = copy.deepcopy(temp)
+    else :
+        dived_s = [dived_s]
+    for i in range(len(dived_s)) :
+        
+        tempi = copy.deepcopy(dived_s[i])
+        for j in range(32-len(tempi)) :
+            tempi.append(0)
+        enc = list(aes.encrypt(bytes(tempi)))
+        dived_s[i] = copy.deepcopy(enc)
+    for i in range(len(dived_s)) :
+        for j in range(len(dived_s[i])) :
+            
+            dived_s[i][j] = FillUp0(hex(dived_s[i][j])[2:],2)
+        dived_s[i] = "".join(dived_s[i])
+    for i in range(len(dived_s)) :
+        "".join(dived_s[i])
+    res = alpha+"".join(dived_s)
+    return res
 
 def dec(input_str,key=None) :
     #input_str ='g94c0ce0ade1452a940af00d843f50512aac9ed7bffdd6c74186516d05aadca07a1efe1337c0c43c30818a8022ef9819dac98f220a4d3615e3717bc7c0812620d'
@@ -116,52 +153,10 @@ def dec(input_str,key=None) :
             div_s[i] = "".join(temp)
     res = "".join(div_s)
     return res
-
-key = input("키 입력(안할시 기본값) :")
-if key == "" or key == " " :
-    key = (str(socket.gethostname()).split("-"))[1]
-
-
-import socket
-
-cli_HOST = '127.0.0.1'
-cli_PORT = 9999
-
-print("cli")
-i = 0
-while True :
-    try :
-
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((cli_HOST, cli_PORT))
-        while True:
-            recvData = s.recv(1024).decode('utf-8')
-            #print(recvData)
-            try :
-                inputing = recvData.split(".")
-
-                res = []
-                for i in range(len(inputing)) :
-                    res.append(dec(inputing[i],key))
-                res = ''.join(res)
-                print(res)
-            except :
-                pass
-            sendData = "ack"
-            s.send(sendData.encode('utf-8'))
-    except :
-        i += 1
-        print(i,"회 시도 실패함.")
-        continue
-'''
-while True :
-
-    inputing = "g263cf9989fa35dd411b8214b451b154ea7186829b3643114e90c143b07653ba8.k78af1637caf4c6971a18419e7fb384953880c10f9e9cece42352dbdca1b4f8ac.g83a5492f8c603a64ccaa3efc046bd44fa5f67dfb1081fd0bf7a84bf895bf2f57.k78af1637caf4c6971a18419e7fb384953880c10f9e9cece42352dbdca1b4f8ac.g7369ea85adc0ac3d33b71297f9b26d6c6f4db256bb7934e8b1fd65b12a68451b.k78af1637caf4c6971a18419e7fb384953880c10f9e9cece42352dbdca1b4f8ac"
-    inputing = inputing.split(".")
-
-    res = []
-    for i in range(len(inputing)) :
-        res.append(dec(inputing[i],key))
-    res = ''.join(res)
-    print(res)
-'''
+def get_ans_yes_or_no_or_another(ans="no") :
+    if "dd"  in ans or "d" in ans or "y" in ans or "ㅛ" in ans or "1" in ans or "yes" in ans or "YES" in ans or "DD" in ans or "D" in ans or "Y" in ans or '응' in ans or '어' in ans or '네' in ans or '예' in ans:
+        return True
+    elif 's' in ans or 'ss'  in ans or 'SS' in ans or 'S' in ans or 'NO' in ans or 'no' in ans or 'n' in ans or 'N' in ans or '0'  in ans or '아니'  in ans or 'ㄴㄴ' in ans or 'ㄴ' in ans or '아니오' in ans or '아니요' in ans or " "in ans or ans == '' or ans == None:
+        return False
+    else :
+        return 2
