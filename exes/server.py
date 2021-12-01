@@ -88,15 +88,28 @@ while keep_lv1 :
 
 conn = []
 def open_connection() :
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        s.bind((ser_HOST, ser_PORT))
+    while True :
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            s.bind((ser_HOST, ser_PORT))
 
-        s.listen(50)
-        temp_conn, addr = s.accept()
-        print("\n"+str(addr)+"연결됨.",end="\n보내기 >")
-        
-        conn.append([temp_conn,addr])
+            s.listen(50)
+            temp_conn, addr = s.accept()
+            print("\n"+str(addr)+"연결됨.",end="\n보내기 >")
+            
+            conn.append([temp_conn,addr])
+
+def open_reminder() :
+    while True :
+        #print("p5")
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            s.bind((ser_HOST, 7904))
+
+            s.listen(50)
+            temp_conn, addr = s.accept()
+            #print("p6")
+            continue
 
 def exit_realy(sendData) :
     
@@ -131,11 +144,16 @@ c를 눌러 클라이언트 창을 열고 상대방에게 접속하려 시도해
 print(last_banner)
 user_ans_pass = input("준비되셨다면 아무 키를 입력해주세요.")
 
+th2 = threading.Thread(target=open_connection)
+th2.start()
+th_re = threading.Thread(target=open_reminder)
+th_re.start()
 not_exit = True
 while not_exit :
     del_count = []
-    th2 = threading.Thread(target=open_connection)
-    th2.start()
+    #print("p1")
+    #print("p2")
+    #print("p3")
     sendData = input("보내기 >")
     if sendData == "" or sendData == None :
         sendData = " "

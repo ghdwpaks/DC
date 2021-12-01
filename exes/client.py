@@ -36,7 +36,7 @@ while True :
 cli_HOST = ""
 keep_lv1 = True
 while keep_lv1 :
-    user_ans2 = input("접속 대상의 아이피를 입력해주세:")
+    user_ans2 = input("접속 대상의 아이피를 입력해주세요:")
     '''
     if defs.defs.get_ans_yes_or_no_or_another(user_ans2) == False :
         print("송신대기를 시작합니다.")
@@ -66,7 +66,7 @@ keep_lv1 = True
 while keep_lv1 :
     user_ans2 = input("접속을 받을 포트를 입력해주세요 (미입력시 9999):")
 
-    if user_ans2 :
+    if user_ans2 == "":
         cli_PORT = 9999
         keep_lv1 = False
         continue

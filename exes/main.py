@@ -20,17 +20,17 @@ def get_user_ans(s,y="승인됐습니다.",n="거부됐습니다.") :
             continue
 
 def inputer() :
-
-    s = input("입력 :")
-    if s == "s" :
-        print("서버를 엽니다.")
-        os.system("start python server.py")
-    elif s == "c" :
-        print("클라이언트를 엽니다.")
-        os.system("start python client.py")
-    else :
-        print(last_prints)
-    
+    while True :
+        s = input("입력 :")
+        if s == "s" :
+            print("서버를 엽니다.")
+            os.system("start python server.py")
+        elif s == "c" :
+            print("클라이언트를 엽니다.")
+            os.system("start python client.py")
+        else :
+            print(last_prints)
+        
          
 
 def ip_getter(cli_HOST, *catch) :
@@ -40,9 +40,10 @@ def ip_getter(cli_HOST, *catch) :
     #print(catch)
     try :
         #print(cli_HOST,"접속 시도중")
+        
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         #s.connect((cli_HOST, uport))
-        s.connect((cli_HOST, uport))
+        s.connect((cli_HOST, 7904))
         lct = time.localtime()
         s = lct.tm_sec
         m = lct.tm_min
@@ -132,7 +133,7 @@ info_prints = """
 """.format(str(usp[0])+"."+str(usp[1])+"."+str(usp[2])+".0 ~ "+str(usp[0])+"."+str(usp[1])+"."+str(usp[2])+".255",uip,uport)
 print(info_prints)
 
-
+ip_getter_th = []
 while True :
     th2 = threading.Thread(target=inputer)
     th2.start()
@@ -144,6 +145,14 @@ while True :
             #print("__main__ type(cli_HOST) :",type(cli_HOST))
             th = threading.Thread(target=ip_getter ,args=[cli_HOST])
             th.start()
+            ip_getter_th.append(th)
             #ip_getter_funcs.append(Process(target=ip_getter, args=(cli_HOST)))        
+        #print("p1")
+        for i4 in range(256) :
+            ip_getter_th[i4].join()
+        #print("p3")
+        for i4 in range(256) :
+            del ip_getter_th[0]
+        #print("p4")
     except :
         continue

@@ -1,0 +1,222 @@
+[33mcommit 57e33380bc2d10ffe505636c8f3e12a07f4f4fab[m[33m ([m[1;36mHEAD -> [m[1;32mmain_desk[m[33m, [m[1;31morigin_lap/main_lap[m[33m, [m[1;32mmain_lap[m[33m)[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Wed Dec 1 12:56:43 2021 +0900
+
+    exes 가 포장됨 ,,,, Exes is packaged.
+
+[33mcommit 0c7d841f49612f436c070a27be7606a714d65b12[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Wed Dec 1 12:17:31 2021 +0900
+
+    made main control process
+
+[33mcommit 6462f95b44d93c7f716c41d582999ff5a9f2fad7[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Tue Nov 30 19:33:00 2021 +0900
+
+    multi server
+
+[33mcommit 0162dc04019000e695b1eb1b402e1f97edef1af6[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Tue Nov 23 06:25:07 2021 +0900
+
+    실사용에 쓰일 사용자 UI 제작 완료 및 UE 설계 완료. 코드 작성 완료. ,,,,,,, Completion of user UI creation and UE design for actual use. Code creation completed.
+
+[33mcommit aeb1db2733d65965280fd9ad6fba239e23584273[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Sat Nov 20 14:23:41 2021 +0900
+
+    로컬 호스트를 통한 34 py 와 35 py 의 연결을 성공시킴 ,,,,,, Successful connection of 34py and 35py through local host.
+
+[33mcommit bc5190f3b233a48d39fb1b8f45f431e9319327ea[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Fri Nov 19 18:18:41 2021 +0900
+
+    34의 서버파일, 35의 클라이언트 파일 제작 완료 ,,,, 34 server file and 35 client file creation completed.
+
+[33mcommit e05692b642c2003ee38ce158f75ab997e789e7d5[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Thu Nov 18 19:18:22 2021 +0900
+
+    20 , 26번대의 py 파일들의 대한 코드 포기 및 폐기 결정. 해당 함수 및 기능들에 대한 컨셉을 이어받은 30,31번대의 py 파일들의 생성 및 코드 완성. 이들 모두를 종합한 32번의 dev_util 파일 설정 및 제작 완료 ,,,,,,,,,,,Decision to abandon and discard code for py files 20 and 26. Generation and code completion of py files 30 and 31 that inherited the concept of the function and functions. The 32 dev_util file settings and production of all of them have been completed.
+
+[33mcommit f1c08c9d2a93b7e90d20bffaca6316863a582c23[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Thu Nov 18 18:12:56 2021 +0900
+
+    복호화 목표 문장을 나눌 수 없다고 결론지음.함수의 전체적인 형태 변화를 진행하기 전에 임시커밋 ,,,,,, Conclusion that the decryption target sentence cannot be divided.Temporary commitment before proceeding with the overall shape change of the function.
+
+[33mcommit a7f077411b8acde7063ec1be2640bae2b860c790[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Wed Nov 17 18:12:56 2021 +0900
+
+    dev_util의 29번째 파일로써 암호 시스템 자체의 문제는 없는것으로 다시 판별되었으나 26의 디코딩에 관한 문제 원인 또한 명확히 밝혀지지 않음 ,,,,,,, As the 29th file of dev_util, it was determined again that there was no problem with the encryption system itself, but the cause of the problem with decoding 26 is also not clear.
+
+[33mcommit 7b288b413f8d5be00d6b5d9860399e1f099cba58[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Tue Nov 16 14:24:21 2021 +0900
+
+    암호의 복호화 및 암호화에 대한 외부 함수의 문제는 없는것으로 판별됨 ,,, It is determined that there is no problem with external functions for decryption and encryption of passwords.
+
+[33mcommit 295abeaaa60a070ee35542e90073a5d530dc47b7[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Mon Nov 15 21:56:31 2021 +0900
+
+    복호화의 5구역 완성. 암호화의 한글 부분 변경 ,,,,, Zone 5 of decryption is completed. Change the Korean part of the encryption.
+
+[33mcommit 0d4be98a4ae04f8092cfcf742b7ae5b342fb0942[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Mon Nov 15 19:18:22 2021 +0900
+
+    함수, 변수, 구역 등등의 설명용 각주 추가 및 예시문 추가. 4구역의 코드 검증 완료. 암호문 생성을 위한 함수 적용 완료, 하지만 아직 암호문 생성에 대한 검증은 안됨. ,,,,, Adding footnotes and example statements for explanation of functions, variables, zones, etc. Code verification for zone 4 is completed. Function application for ciphertext generation is completed, but ciphertext generation has not yet been verified.
+
+[33mcommit f26f511ddfbece874ccd032b16364dc4b55d5da9[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Mon Nov 15 18:12:10 2021 +0900
+
+    영어로 입력할 시 한계값에 대한 구조적 오류 발견 및 수정 완료 ,,, When entering in English, structural errors for marginal values are detected and corrected.
+
+[33mcommit ab3afc602ab40475af9b164bd623849d8332331d[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Sun Nov 14 09:04:36 2021 +0900
+
+    encode에 대한 각주를 전부 제거한 함수 활용 가능한 상태 제작 ,,,, Create a state in which all footnotes for encodes are removed.
+
+[33mcommit 9c31cd9b4353f1df36d47282cd36c35ff406c858[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Sun Nov 14 08:38:14 2021 +0900
+
+    각주 추가 및 여러 출력문 조정 ,,,, Add footnotes and adjust multiple output statements.
+
+[33mcommit 96aa556ce1d35291715402bd89b437e158283b05[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Sun Nov 14 07:39:23 2021 +0900
+
+    파일 고르는 일부 과정 제작됨. ,,,,, Some process of selecting a file is created.
+
+[33mcommit 1a17eda2b27d87af47b8da435ba5de93b7303307[m
+Merge: fa4c171 e8a8e88
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Tue Nov 9 02:18:03 2021 +0900
+
+    Merge branch 'main_lap' into main_desk
+
+[33mcommit e8a8e88d5fabec52a770a6b557f6ccd6da261ec6[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Tue Nov 9 02:17:37 2021 +0900
+
+    숫자 구분까지 완료하여 (복호화가 아닌) 암호화 함수 제작 성공 ,,,, Successfully created an encryption function (not decryption) by completing the number classification.
+
+[33mcommit fa4c171963ec31b1aa24350525e725865f7f0fab[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Mon Nov 8 20:14:06 2021 +0900
+
+    연결 편의성 개선
+
+[33mcommit e7cc15a361ebba4da78f12d6c845c28d6d2fc450[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Mon Nov 8 16:06:37 2021 +0900
+
+    temp, 숫자 구분 알고리즘 포함됐으나 확장된 dived_s 를 고려하지 않음. 수정 필요함.
+
+[33mcommit 88e7c99f73e82e997c8887e8dd95bcb893abf6a3[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Thu Nov 4 14:10:40 2021 +0900
+
+    단어 길이 제한 삭제됨. 숫자는 삽입하지 않는것을 극히 권장하지 않음 ,,,,, Word length limit deleted. It is highly recommended not to insert numbers.
+
+[33mcommit 0aeba952bbe453d02540d117c7861f4e510c18a4[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Tue Nov 2 15:01:39 2021 +0900
+
+    컴퓨터 이름을 이용한 키 제작 부분 완성 ,,, Completed the key making part using the computer name.
+
+[33mcommit 801e5102e13295f29ed41ac598a36139cb23ecad[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Tue Nov 2 14:10:50 2021 +0900
+
+    구조화가 완료되지 않은 암호화 부분 제작 완료. 복호화 부분 제작 필요함. ,,,,, Completed the production of encrypted parts that have not been structured. Need to make a decryption part.
+
+[33mcommit 61b3dbaada0957b2fae2046127489de1dd147643[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Tue Nov 2 02:02:04 2021 +0900
+
+    최소 부분의 암호화 성공 ,,,, I successfully encrypted the minimum part.
+
+[33mcommit 564be416b9034b0b6b1973778c89fab12df81214[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Mon Nov 1 16:10:27 2021 +0900
+
+    테스트 1 결론 도출 ,,,,, Test 1. Draw a conclusion.
+
+[33mcommit fad05e644796cacb6653196ed424b8832b5aca5b[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Sun Oct 31 23:53:58 2021 +0900
+
+    dev_util의 20번째 파일(20_div_str.py)의 설명문 추가 및 1차 코드 설명서(기획서) 포함됨. ,,,,, Add a description of the 20th file 20_div_str.py of dev_util and include a first code description (plan).
+
+[33mcommit 044aa0e3b17223ead316c323838f82f50621c20b[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Sun Oct 31 23:42:17 2021 +0900
+
+    암호화와 관련된 코드 및 함수정리 자료 확보, 암호화 또는 복호화 직전의 문장 형식을 만드는 함수 제작 완료. ,,,,,,, Securing code and function organization data related to encryption, creating a sentence format just before encryption or decryption is completed.
+
+[33mcommit ba94cc9ce264cb174d0aa729a0d49ab15a30c6eb[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Sat Oct 30 23:44:36 2021 +0900
+
+    test log ,,,,, 테스트 로그
+
+[33mcommit d4f8c789ecd85848072ad81f81e513a45aad351d[m[33m ([m[1;31morigin_desk/main[m[33m)[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Fri Oct 29 12:56:45 2021 +0900
+
+    이전보다 더 간략화된 코드를 main에 적용함. ,,,,, Apply a simpler code to the main than before.
+
+[33mcommit 6936b94108e6b52e64607080895abce21cda96cf[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Fri Oct 29 10:32:44 2021 +0900
+
+    멀티 쓰레드를 이용한 연결 방식 채택 포기. main.py에서 client.py , server.py를 각각 여는것으로 편의성 제공 방식 채택. 89_controler.py 에서 테스트 성공함. ,,, Giving up the adoption of a connection method using multi-thread. By opening server.py and server.py respectively, we adopt a convenience delivery method. Test successful at 89_controller.py.
+
+[33mcommit e9be2a51d729e4fa48672cdd131facfe27bf1b08[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Thu Oct 28 15:55:15 2021 +0900
+
+    SPECIAL THANKS cmg8431 (최민기) , 5_client.py, 6_server.py simple driving successful in dev_util folder , dev_util 폴더의 5_client.py , 6_server.py 간단 구동 성공
+
+[33mcommit 9ec7fa4d0c95398ea46a56d8fd23555707498f8f[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Thu Oct 28 15:33:54 2021 +0900
+
+    ConnectionRefusedError: [WinError 10061] 에러 보고서 작성, ConnectionRefusedError: [WinError 10061] error report created
+
+[33mcommit 1fde6ec82546498f9192029bfbd5f7e207c3434e[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Thu Oct 28 13:46:53 2021 +0900
+
+    status confirmation mistake, commit confirmation (no commitment and no changes below) ,,,,, status 확인실수, commit 확인 (아래 커밋과 변경사항 없음)
+
+[33mcommit 30b4b308f304784ed120da7f5c35702185c4d1c0[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Thu Oct 28 13:44:51 2021 +0900
+
+    Modify readme file, add_subs_ppt file, create dev_util folder , readme 파일 수정, add_subs_ppt 파일 추가, dev_util 폴더 생성
+
+[33mcommit 60b61492477e163bfcd4011b6219934a1cc407c9[m
+Author: Bdoolgiya <ysc92997597@gmail.com>
+Date:   Thu Oct 28 10:53:22 2021 +0900
+
+    modified rink_Collection rink_Collection 파일 정리(socket, argparse, ipaddress)
+
+[33mcommit 1d9ca0f4d8ea7b7e8f6adc5719c4db47bf12f125[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Wed Oct 27 23:41:07 2021 +0900
+
+    rink_collection ghdwpaks add
+
+[33mcommit 34070bb3c48de7c0e3395feaf633f7c204b6f18e[m
+Author: ghdwpaks <hjm7904@gmail.com>
+Date:   Wed Oct 27 10:48:25 2021 +0900
+
+    first commit
