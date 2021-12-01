@@ -1,6 +1,10 @@
 import socket
 
 print("cli")
+
+cli_HOST = "127.0.0.1"
+cli_PORT = 9999
+
 i = 0
 while True :
     try :

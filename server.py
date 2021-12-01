@@ -2,6 +2,9 @@ import socket
 
 print("ser")
 
+ser_HOST = "127.0.0.1"
+ser_PORT = 9999
+
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind((ser_HOST, ser_PORT))
