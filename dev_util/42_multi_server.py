@@ -1,5 +1,6 @@
 import socket
 import threading
+import os
 ser_HOST = '127.0.0.1'
 ser_PORT = 9999
 
@@ -54,3 +55,4 @@ while not_exit :
             continue
     for j in range(len(del_count)) :
         del conn[del_count[j]-j]
+quit()

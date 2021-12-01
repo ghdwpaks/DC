@@ -23,9 +23,13 @@ def inputer() :
 
     s = input("입력 :")
     if s == "s" :
+        print("서버를 엽니다.")
         os.system("start python server.py")
     elif s == "c" :
+        print("클라이언트를 엽니다.")
         os.system("start python client.py")
+    else :
+        print(last_prints)
     
          
 
@@ -43,20 +47,23 @@ def ip_getter(cli_HOST, *catch) :
         s = lct.tm_sec
         m = lct.tm_min
         h = lct.tm_hour
-        print("\n확인됨 :",str(cli_HOST)+"\t\t"+str(h)+":"+str(m)+":"+str(s),"\n입력 :",end="")
+        add_prints = ""
+        if str(cli_HOST) == str(inside_ip) :
+            add_prints = "(자신)"
+        print("\n확인됨 :",str(cli_HOST)+add_prints+"\t\t"+str(h)+":"+str(m)+":"+str(s),"\n입력 :",end="")
         #ip_info_getter.put(cli_HOST)
     except :
         pass
 
 banner = """
 환영합니다.
-현재 상테애서는 자신이 속한 내부 네트워크에 어떤 사람들이 통신준비가 되어있느닞
+현재 상테애서는 자신이 속한 내부 네트워크에 어떤 사람들이 통신준비가 되어있는지
 또는, 통신을 하고있는지 확인할 수 있습니다.
 포트포워딩을 통하여 자신이 원하는 만큼 통신 범위를 넓히는 방법도 있으나 이 방법은 권장하지 않습니다.
 
 자신의 아이피를 입력해주시고 프로그램을 본격적으로 시작해주세요.
 """
-
+print("\n\n\n")
 print(banner)
 inside_ip = sock.getsockname()[0]
 uip = ""
@@ -75,6 +82,7 @@ while True :
         else : 
             continue
 
+print("\n\n\n")
 while True :
     user_port = input("연결 포트(기본값 :9999) :")
     if user_port == "" :
@@ -89,6 +97,7 @@ while True :
         else : 
             continue
 
+print("\n\n\n")
 
 print("마지막으로 본격적으로 프로그램을 시작하기 전에 마지막으로 알려드리겠습니다.")
 last_prints = """
@@ -106,13 +115,14 @@ s 는 본인의 서버를 엽니다.
 접속 가능한 아이피를 알려줍니다.
 다만, 포트마저 변경된 경우에는 찾을 수 없을 수도 있습니다.
 
-이 안내문이 다시 보고싶으시면 s, c, sc 이외에 아무거나 치면 나옵니다.
+이 안내문이 다시 보고싶으시면 s, c이외에 아무거나 치면 나옵니다.
 """
 print(last_prints)
 passing = input("준비 되셨으면 아무 키를 입력해주세요.")
 
 
 
+print("\n\n\n")
 usp = uip.split(".") # uip splited "."
 info_prints = """
 최종적인 설정은 다음과 같습니다.
