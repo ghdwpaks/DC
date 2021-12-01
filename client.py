@@ -1,9 +1,10 @@
 import socket
 
-cli_HOST = '172.30.1.46'
+print("cli")
+
+cli_HOST = "127.0.0.1"
 cli_PORT = 9999
 
-print("cli")
 i = 0
 while True :
     try :
